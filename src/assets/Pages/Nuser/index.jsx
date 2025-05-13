@@ -1,5 +1,4 @@
 import "./login.css";
-import logo from "../../assets/imgs/chat.png";
 import { useState } from "react";
 
 
@@ -45,38 +44,41 @@ function Login() {
     <>
       <header></header>
 
-      <main className="page-container">
-        <div className="robo-image"></div> //alterar bg
+      <main>
+        <div className="bg">
         <div className="logincontainer">
-          <img className="logo" src={logo} alt="Senai GPT logo" />  /alterar logo
+         
 
-          <h1>Login</h1>
+          <h1>Create Your Account</h1>
+          <p>Sign up to start organizing your notes and boost your productiviy</p>
 
           <input
             className="inpt"
             value={email}
             onChange={(event) => setEmail(event.target.value)}
             type="email"
-            placeholder="Insira o e-mail"
+            placeholder="Endereço de E-mail"
           />
           <input
             className="inpt"
             value={senha}
             onChange={(event) => setSenha(event.target.value)}
             type="password"
-            placeholder="Insira sua senha"
+            placeholder="Cadastre sua senha"
           />
 
           <button className="btn" onClick={() => onLoginClick()}>
             Entrar
           </button>
 
-          <a className="gotonuser" href="/nuser">Quero me cadastrar</a>
+          <a className="gotonuser" href="/login">Já tem uma conta?</a>
 
+        </div>
         </div>
       </main>
 
-      <footer></footer>
+      <footer>
+      </footer>
     </>
   );
 }
