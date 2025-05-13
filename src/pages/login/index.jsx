@@ -1,5 +1,5 @@
 import "./login.css";
-import logo from "../../assets/imgs/Chat.png";
+import logo from "../../assets/imgs/LogoWrapper.png";
 import { useState } from "react";
 
 // front@gmail.com
@@ -62,15 +62,15 @@ function Login() {
     
         <div className="login-container">
 
-          {/* <img className="logo" src={logo} alt="Logo do SeniaGPT." /> */}
+          <img className="logo" src={logo} alt="Logo do SenaiLogo." />
           
 
-          <h1
+          <h2
 
             id="meutitulo"
             className="titulo"
-          > Welcome to Note</h1>
-          <h2>Please log in to continue</h2>
+          > <strong>Welcome to Note</strong></h2>
+          <h3>Please log in to continue</h3>
 
           <h4>Email Adress</h4>
           <input className="inpt" value={email} onChange={event => setEmail(event.target.value)} type="email" placeholder="Insira o e-mail" />
