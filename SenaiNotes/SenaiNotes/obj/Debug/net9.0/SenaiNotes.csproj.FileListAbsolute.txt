@@ -161,3 +161,4 @@ C:\Users\fic\Desktop\SenaiNotes\Senainotes\SenaiNotes\SenaiNotes\obj\Debug\net9.
 C:\Users\fic\Desktop\SenaiNotes\Senainotes\SenaiNotes\SenaiNotes\obj\Debug\net9.0\SenaiNotes.pdb
 C:\Users\fic\Desktop\SenaiNotes\Senainotes\SenaiNotes\SenaiNotes\obj\Debug\net9.0\SenaiNotes.genruntimeconfig.cache
 C:\Users\fic\Desktop\SenaiNotes\Senainotes\SenaiNotes\SenaiNotes\obj\Debug\net9.0\ref\SenaiNotes.dll
+C:\Users\fic\Desktop\SenaiNotes\Senainotes\SenaiNotes\SenaiNotes\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

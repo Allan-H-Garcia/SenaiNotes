@@ -1,7 +1,28 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\fic\\Desktop\\SenaiNotes\\Senainotes\\SenaiNotes\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{33A1C9E2-E567-40E3-A3CB-698800B46203}|SenaiNotes\\SenaiNotes.csproj|c:\\users\\fic\\desktop\\senainotes\\senainotes\\senainotes\\senainotes\\controllers\\notacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33A1C9E2-E567-40E3-A3CB-698800B46203}|SenaiNotes\\SenaiNotes.csproj|solutionrelative:senainotes\\controllers\\notacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33A1C9E2-E567-40E3-A3CB-698800B46203}|SenaiNotes\\SenaiNotes.csproj|c:\\users\\fic\\desktop\\senainotes\\senainotes\\senainotes\\senainotes\\repositories\\notarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33A1C9E2-E567-40E3-A3CB-698800B46203}|SenaiNotes\\SenaiNotes.csproj|solutionrelative:senainotes\\repositories\\notarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33A1C9E2-E567-40E3-A3CB-698800B46203}|SenaiNotes\\SenaiNotes.csproj|c:\\users\\fic\\desktop\\senainotes\\senainotes\\senainotes\\senainotes\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33A1C9E2-E567-40E3-A3CB-698800B46203}|SenaiNotes\\SenaiNotes.csproj|solutionrelative:senainotes\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33A1C9E2-E567-40E3-A3CB-698800B46203}|SenaiNotes\\SenaiNotes.csproj|c:\\users\\fic\\desktop\\senainotes\\senainotes\\senainotes\\senainotes\\interfaces\\inotarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33A1C9E2-E567-40E3-A3CB-698800B46203}|SenaiNotes\\SenaiNotes.csproj|solutionrelative:senainotes\\interfaces\\inotarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33A1C9E2-E567-40E3-A3CB-698800B46203}|SenaiNotes\\SenaiNotes.csproj|c:\\users\\fic\\desktop\\senainotes\\senainotes\\senainotes\\senainotes\\context\\senainotescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33A1C9E2-E567-40E3-A3CB-698800B46203}|SenaiNotes\\SenaiNotes.csproj|solutionrelative:senainotes\\context\\senainotescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +30,72 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NotaController.cs",
+              "DocumentMoniker": "C:\\Users\\fic\\Desktop\\SenaiNotes\\Senainotes\\SenaiNotes\\SenaiNotes\\Controllers\\NotaController.cs",
+              "RelativeDocumentMoniker": "SenaiNotes\\Controllers\\NotaController.cs",
+              "ToolTip": "C:\\Users\\fic\\Desktop\\SenaiNotes\\Senainotes\\SenaiNotes\\SenaiNotes\\Controllers\\NotaController.cs",
+              "RelativeToolTip": "SenaiNotes\\Controllers\\NotaController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T00:33:48.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NotaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fic\\Desktop\\SenaiNotes\\Senainotes\\SenaiNotes\\SenaiNotes\\Repositories\\NotaRepository.cs",
+              "RelativeDocumentMoniker": "SenaiNotes\\Repositories\\NotaRepository.cs",
+              "ToolTip": "C:\\Users\\fic\\Desktop\\SenaiNotes\\Senainotes\\SenaiNotes\\SenaiNotes\\Repositories\\NotaRepository.cs",
+              "RelativeToolTip": "SenaiNotes\\Repositories\\NotaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T00:30:57.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "INotaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fic\\Desktop\\SenaiNotes\\Senainotes\\SenaiNotes\\SenaiNotes\\Interfaces\\INotaRepository.cs",
+              "RelativeDocumentMoniker": "SenaiNotes\\Interfaces\\INotaRepository.cs",
+              "ToolTip": "C:\\Users\\fic\\Desktop\\SenaiNotes\\Senainotes\\SenaiNotes\\SenaiNotes\\Interfaces\\INotaRepository.cs",
+              "RelativeToolTip": "SenaiNotes\\Interfaces\\INotaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T00:27:07.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\fic\\Desktop\\SenaiNotes\\Senainotes\\SenaiNotes\\SenaiNotes\\Program.cs",
+              "RelativeDocumentMoniker": "SenaiNotes\\Program.cs",
+              "ToolTip": "C:\\Users\\fic\\Desktop\\SenaiNotes\\Senainotes\\SenaiNotes\\SenaiNotes\\Program.cs",
+              "RelativeToolTip": "SenaiNotes\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T00:23:10.231Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SenaiNotesContext.cs",
+              "DocumentMoniker": "C:\\Users\\fic\\Desktop\\SenaiNotes\\Senainotes\\SenaiNotes\\SenaiNotes\\Context\\SenaiNotesContext.cs",
+              "RelativeDocumentMoniker": "SenaiNotes\\Context\\SenaiNotesContext.cs",
+              "ToolTip": "C:\\Users\\fic\\Desktop\\SenaiNotes\\Senainotes\\SenaiNotes\\SenaiNotes\\Context\\SenaiNotesContext.cs",
+              "RelativeToolTip": "SenaiNotes\\Context\\SenaiNotesContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T00:09:19.063Z"
             }
           ]
         }

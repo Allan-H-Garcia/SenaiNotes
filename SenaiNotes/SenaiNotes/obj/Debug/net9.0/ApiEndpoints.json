@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "SenaiNotes.Controllers.NotaController",
+    "Method": "ListarNotas",
+    "RelativePath": "api/Nota",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
