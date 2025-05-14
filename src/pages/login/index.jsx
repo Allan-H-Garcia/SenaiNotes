@@ -72,14 +72,14 @@ function Login() {
           > <strong>Welcome to Note</strong></h2>
           <h3>Please log in to continue</h3>
 
-          <h4>Email Adress</h4>
-          <input className="inpt" value={email} onChange={event => setEmail(event.target.value)} type="email" placeholder="Insira o e-mail" />
-          <h4>Passoword</h4> 
-          <input className="inpt" value={password} onChange={event => setPassoword(event.target.value)} type="password" placeholder="Insira a senha" />
+          <h4>Email Address</h4>
+          <input className="inpt" value={email} onChange={event => setEmail(event.target.value)} type="email" placeholder="email@example.com" />
+          <h4>Password</h4>  
+          <input className="inpt" value={password} onChange={event => setPassoword(event.target.value)} type="password" />
           
 
           <button className="btn" onClick={() => onLoginClick()}>Login</button> 
-          <a className="form-hint" href="/new-user">No account yet? Sign Up</a>
+          <a className="form-hint" href="/new-user">No account yet?  <strong> Sign Up</strong></a>
 
         </div>
 
