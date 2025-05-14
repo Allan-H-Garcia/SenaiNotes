@@ -38,6 +38,7 @@ function Login() {
       console.log("Token:" + token);
 
       localStorage.setItem("meuToken", token)
+      console.log("Oi")
 
       window.location.href = "/chat";
 
