@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./newuser.css";
 import logo from "../../assets/imgs/LogoWrapper.png";
+import inforCircle from "../../assets/imgs/infocircle.svg";
 
 
 
@@ -59,20 +60,28 @@ function NewUser() {
 
                 <div className="login-container">
 
-                     <img className="login-logo" src={logo} alt="Logo do SenaiGPT." />
+                    <img className="login-logo" src={logo} alt="Logo do SenaiGPT." />
 
-                    <h1
+                    <h2
                         id="meutitulo"
                         className="titulo"
-                    >Novo usuário</h1>
+                    ><strong>Create Your Account</strong></h2>
 
-                    
-                    <input className="inpt" value={email} onChange={event => setEmail(event.target.value)}type="email" placeholder="Insira o e-mail" />
-                    <input className="inpt" value={password} onChange={event => setPassword(event.target.value)}type="password" placeholder="Insira a senha" />
-                    
+                    <h3>Sign up to start organizing your notes and boost your productivity.</h3>
 
-                    <button className="btn" onClick={() => onNewUserClick()}>Sing Up</button> <br/>
-                    <a className="form-hint" href="/login">Clique aqui para fazer o login</a>
+                    <h4>Email Address</h4>
+                    <input className="inpt" value={email} onChange={event => setEmail(event.target.value)} type="email" placeholder="email@example.com" />
+                    <h4>Password</h4>
+                    <input className="inpt" value={password} onChange={event => setPassword(event.target.value)} type="password" />
+
+                    <div className="infor">
+                        <img src={inforCircle} alt="ícone de informação." />
+                        <h5> At least 8 characters</h5>
+                    </div>
+
+
+                    <button className="btn" onClick={() => onNewUserClick()}>Sing Up</button> <br />
+                    <a className="form-hint" href="/login">Already have an account? <strong>Login</strong></a>
 
                 </div>
 

@@ -56,7 +56,7 @@
 
 }
 
-.chat1 img{
+.chat1 img {
 
     margin-right: 15px;
 }
@@ -77,7 +77,7 @@
 
 }
 
-.chat2 img{
+.chat2 img {
 
     margin-right: 15px;
 }
@@ -114,7 +114,7 @@
     flex-direction: column;
     align-items: center;
     margin: auto;
-   
+
 
 
 }
@@ -128,7 +128,7 @@
     width: 17vw;
     font-size: 16px;
     height: 7vh;
-    
+
 }
 
 .input-container input {
@@ -146,19 +146,19 @@
 .input-container {
     height: 7vh;
     border: none;
-    border-radius: 16px; 
+    border-radius: 16px;
     background-color: #F7F9FB;
-    display: flex; 
+    display: flex;
 
     margin-top: auto;
-    margin-bottom: 40px; 
+    margin-bottom: 40px;
 
 
 }
 
 .input-container img {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     justify-content: center;
 
 

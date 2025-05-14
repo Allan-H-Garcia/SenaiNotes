@@ -15,9 +15,9 @@
     display: flex;
     border-radius: 10px;
     background-color: #F3F5F8;
-    /* justify-content: center !important;
-    align-items: center !important;
-    height: 100vh !important; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 
 
 }
@@ -25,7 +25,7 @@
 
 * h2 {
 
-    font-size: 25px !important;
+    font-size: 30px !important;
     font-family: "Inter";
     font-weight: normal;
     padding-top: 22px;
@@ -38,10 +38,9 @@
 
 }
 
-
 * h3 {
     color: #525866;
-    font-size: 14px;
+    font-size: 15px;
     margin-bottom: 27px;
     padding: 10px;
     font-family: "Inter";
@@ -64,18 +63,10 @@
     width: 438px;
     font-family: "Inter";
 
-}
 
-.infor {
 
-    display: flex;
-    align-items: flex-end;
-    width: 444px;
-    height: 0px;
-    font-family: "Inter";
 
-    color: #525866;
-    margin: 12px;
+
 }
 
 .inpt {
@@ -88,9 +79,9 @@
     font-family: "Inter";
 
     border: 2px solid #CACFD8 !important;
-    display: flex;
 
 }
+
 
 .btn {
 
@@ -101,10 +92,7 @@
     color: white;
     border: none;
     font-size: 16px;
-    margin-top: 3px;
     font-family: "Inter";
-
-
 
 
 }
@@ -112,16 +100,19 @@
 .form-hint {
     background-color: white;
     color: #525866;
-    margin-top: 10px;
+    margin-top: 15px;
     border-top: 1px solid #E0E4EA !important;
+    padding: 10px;
+    width: 444px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: "Inter";
 
-
-
-
-
+    text-decoration: none;
 }
+
+
 
 
 
@@ -136,8 +127,6 @@
 
     width: 540px !important;
     height: 556px !important;
-
-
 
 
 }

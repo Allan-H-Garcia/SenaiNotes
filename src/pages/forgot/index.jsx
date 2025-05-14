@@ -1,16 +1,15 @@
-import "./login.css";
+import "./forgot.css";
 import logo from "../../assets/imgs/LogoWrapper.png";
 import { useState } from "react";
 
 // front@gmail.com
 //frontdomina
-function Login() {
+function forgotPassword() {
 
   const [email, setEmail] = useState("");
-  const [password, setPassoword] = useState("");
 
 
-  const onLoginClick = async () => {
+  const onForgotClick = async () => {
 
 
     let response = await fetch("https://senai-gpt-api.azurewebsites.net/login", {
@@ -21,14 +20,13 @@ function Login() {
       method: "POST", //Método que envia dados
       body: JSON.stringify({ //quem define é o back-end
         email: email,
-        password: password //não precisa de virgula porque é a ultima propriedade
       })
 
     });
 
     if (response.ok == true) {
 
-      alert("Login realizado com sucesso!");
+      alert("Email enviado com sucesso!");
 
       console.log(response);
 
@@ -45,7 +43,7 @@ function Login() {
     } else {
 
       if (response.status == 401) {
-        alert("Credenciais incorretas. Tente novamente.");
+        alert("Erro ao enviar o link. Verifique o email digitado.");
       } else {
 
         alert("Erro inesperado aconteceu, caso persista contate os administradores.");
@@ -70,22 +68,15 @@ function Login() {
 
             id="meutitulo"
             className="titulo"
-          > <strong>Welcome to Note</strong></h2>
-          <h3>Please log in to continue</h3>
+          > <strong>Forgotten your password?</strong></h2>
+          <h3>Enter your email below, and we’ll send you a link to reset it.</h3>
 
           <h4>Email Address</h4>
           <input className="inpt" value={email} onChange={event => setEmail(event.target.value)} type="email" placeholder="email@example.com" />
 
-          <div className="passwordForgot">
-            <h4>Password</h4>
-            <a className="forgot" href="/forgot">Forgot</a>
-          </div>
 
-          <input className="inpt" value={password} onChange={event => setPassoword(event.target.value)} type="password" />
+          <button className="btn" onClick={() => onForgotClick()}>Send Reset Link</button>
 
-
-          <button className="btn" onClick={() => onLoginClick()}>Login</button>
-          <a className="form-hint" href="/new-user">No account yet?  <strong> Sign Up</strong> </a>
 
         </div>
 
@@ -96,4 +87,4 @@ function Login() {
   )
 }
 
-export default Login;
+export default forgotPassword;

@@ -50,9 +50,9 @@ function Chat() {
 
                     <div className="superior">
 
-                    <button className="New-chat">+ New chat</button>
+                        <button className="New-chat">+ New chat</button>
 
-                        {chats.map( chat => (
+                        {chats.map(chat => (
                             <button className="chat1">
                                 <img src="../assets/imgs/chat.svg" alt="icone de chat." />
                                 {chat.chatTitle}
@@ -60,7 +60,7 @@ function Chat() {
 
 
                         ))}
-                        
+
 
 
                     </div>
