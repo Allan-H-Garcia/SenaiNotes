@@ -44,7 +44,6 @@
 * h4 {
 
     font-size: 14px;
-    align-items: flex-start;
     display: flex;
     margin: 5px;
     /* border: 2px black; */
@@ -58,6 +57,7 @@
     border-radius: 10px !important;
     width: 444px !important;
     margin-bottom: 20px;
+    
     border: 2px solid black;
 
 
@@ -74,6 +74,13 @@
     font-size: 16px;
     
 
+}
+
+.form-hint {
+    background-color: white;
+    color: #525866;
+    margin-top: 10px;
+    border-top: 2px solid black;
 }
 
 

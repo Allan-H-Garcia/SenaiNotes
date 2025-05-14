@@ -38,8 +38,7 @@ function Login() {
       console.log("Token:" + token);
 
       localStorage.setItem("meuToken", token)
-      console.log("Oi")
-
+      
       window.location.href = "/chat";
 
     } else {
@@ -75,10 +74,12 @@ function Login() {
 
           <h4>Email Adress</h4>
           <input className="inpt" value={email} onChange={event => setEmail(event.target.value)} type="email" placeholder="Insira o e-mail" />
-          <h4>Passoword</h4>
+          <h4>Passoword</h4> 
           <input className="inpt" value={password} onChange={event => setPassoword(event.target.value)} type="password" placeholder="Insira a senha" />
+          
 
-          <button className="btn" onClick={() => onLoginClick()}>Login</button>
+          <button className="btn" onClick={() => onLoginClick()}>Login</button> 
+          <a className="form-hint" href="/new-user">No account yet? Sign Up</a>
 
         </div>
 
