@@ -5,6 +5,7 @@ import Chat from "./pages/chat";
 import NewUser from "./pages/new-user/index";
 import ForgotPassword from "./pages/forgot/index";
 import ConfirmPassword from "./pages/reset-password";
+import Notes from "./pages/notes";
 
 
 
