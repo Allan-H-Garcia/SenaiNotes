@@ -6,8 +6,8 @@ import { useState } from "react";
 //frontdomina
 function ConfirPassword() {
 
-    const [password, setPassoword] = useState("");
-    const [confirPassword, setConfirPassoword] = useState("");
+    const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
 
 
     const onResetClick = async () => {
@@ -21,7 +21,7 @@ function ConfirPassword() {
             method: "POST", //Método que envia dados
             body: JSON.stringify({ //quem define é o back-end
                 password: password,
-                confirPassword: confirPassword //não precisa de virgula porque é a ultima propriedade
+                confirPassword: confirmPassword //não precisa de virgula porque é a ultima propriedade
             })
 
         });
@@ -78,10 +78,10 @@ function ConfirPassword() {
                         <h4>New Password</h4>
 
                     </div>
-                    <input className="inpt" value={password} onChange={event => setPassoword(event.target.value)} type="password" />
+                    <input className="inpt" value={password} onChange={event => setPassword(event.target.value)} type="password" />
 
                     <h4>Confirm New Password</h4>
-                    <input className="inpt" value={password} onChange={event => setPassoword(event.target.value)} type="password" />
+                    <input className="inpt" value={confirmPassword} onChange={event => setConfirmPassword(event.target.value)} type="password" />
 
 
                     <button className="btn" onClick={() => onResetClick()}>Reset Password</button>

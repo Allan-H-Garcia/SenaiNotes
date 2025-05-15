@@ -126,7 +126,9 @@
     text-decoration: none;
 }
 
-
+.form-hint strong {
+    margin-left: 15px;
+}
 
 
 

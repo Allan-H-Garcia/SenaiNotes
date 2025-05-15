@@ -10,14 +10,14 @@
 
 
 
-.paige-container {
+.page-container {
 
     display: flex;
     border-radius: 10px;
     background-color: #F3F5F8;
-    /* justify-content: center !important;
+    justify-content: center !important;
     align-items: center !important;
-    height: 100vh !important; */
+    height: 100vh !important;
 
 
 }
@@ -76,8 +76,9 @@
 
     color: #525866;
     margin: 12px;
-}
 
+}
+s
 .inpt {
     padding: 18px;
     border: none;
@@ -117,10 +118,10 @@
     display: flex;
     font-family: "Inter";
 
+}
 
-
-
-
+.form-hint strong {
+    margin-left: 15px;
 }
 
 
