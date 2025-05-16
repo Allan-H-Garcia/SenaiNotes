@@ -1,11 +1,18 @@
 import { useEffect, useState } from "react";
-import logo2 from "../../assets/imgs/Chat.png";
-import "./chat.css"
+import logo from "../../assets/imgs/LogoWrapper.png";
+import "./chat.css";
+import japan from "../../assets/imgs/japan.png";
+import tag from "../../assets/imgs/Tag.png";
+import home from "../../assets/imgs/Home.svg";
+import rectangle from "../../assets/imgs/Rectangle44.png"
+// import archive from "../../assets/Archive.svg";
+
 // import js from "@eslint/js";
 
 function Chat() {
 
     const [chats, setChats] = useState([]);
+
 
     useEffect(() => {
         //Executada toda vez que a tela abre.
@@ -37,138 +44,142 @@ function Chat() {
         } else {
 
             if (response.status == 401)
-                alert("Token invalido. Faça o login novamente.").
-                    window.location.href = "/login";
+                alert("Token invalido. Faça o login novamente.");
+            window.location.href = "/login";
         }
     }
 
     return (
 
         <>
-            <main className="container2">
-                <div className="chats">
+            <main className="container">
+                <div className="tags">
 
-                    <div className="superior">
+                    <img className="logo" src={logo} alt="Logo do SenaiLogo." />
 
-                        <button className="New-chat">+ New chat</button>
+                    <div className="globo-tags">
+                        <button>
+                            <img className="tag" src={home} alt="." />
+                            All Notes</button>
+                        <button>
+                            <img className="tag" src={home} alt="." />
+                            Archived Notes</button>
 
-                        {chats.map(chat => (
-                            <button className="chat1">
-                                <img src="../assets/imgs/chat.svg" alt="icone de chat." />
-                                {chat.chatTitle}
+                        <p>Tags</p>
+                        <button>
+                            <img className="tag" src={tag} alt="Tag." />
+                            Cooking</button>
+                        <button>
+                            <img className="tag" src={tag} alt="Tag." />
+                            Cooking</button>
+                        <button>
+                            <img className="tag" src={tag} alt="Tag." />
+                            Cooking</button>
+                        <button>
+                            <img className="tag" src={tag} alt="Tag." />
+                            Cooking</button>
+                        <button>
+                            <img className="tag" src={tag} alt="Tag." />
+                            Cooking</button>
+                        <button>
+                            <img className="tag" src={tag} alt="Tag." />
+                            Cooking</button>
+                        <button>
+                            <img className="tag" src={tag} alt="Tag." />
+                            Cooking</button>
+                        <button>
+                            <img className="tag" src={tag} alt="Tag." />
+                            Cooking</button>
+                        <button>
+                            <img className="tag" src={tag} alt="Tag." />
+                            Cooking</button>
+                        <button>
+                            <img className="tag" src={tag} alt="Tag." />
+                            Cooking</button>
+
+                    </div>
+                </div>
+
+                <div className="middle">
+
+                    <div className="allNotes">
+
+                        <h1><strong>All Notes</strong></h1>
+
+                    </div>
+
+                    <div className="newNote">
+
+                        <button className="create">+ Create New Note</button>
+
+                        <div className="notes">
+
+                            {/* <button className="note"> */}
+                                {/* <img src={japan} alt="Japan" />
+                                <div className="note-content">
+                                    <div className="note-title">Japan Travel Planning</div>
+                                    <div className="note-tags">
+                                        <span className="tag">Travel</span>
+                                        <span className="tag">Personal</span>
+                                    </div>
+                                    <div className="note-date">28 Oct 2024</div>
+                                </div>
+                            </button> */}
+
+                            <button>
+                                <img src={japan} alt="imagem do japan." />
+                                <div className="note-text">Japan Travel Planning</div>
+                            </button>
+
+                            <button>
+                                <img src={japan} alt="imagem do japan." />
+                                <div className="note-text">Japan Travel Planning</div>
+                            </button>
+                            <button>
+                                <img src={japan} alt="imagem do japan." />
+                                <div className="note-text">Japan Travel Planning</div>
+                            </button>
+                            <button>
+                                <img src={japan} alt="imagem do japan." />
+                                <div className="note-text">Japan Travel Planning</div>
+                            </button>
+                            <button>
+                                <img src={japan} alt="imagem do japan." />
+                                <div className="note-text">Japan Travel Planning</div>
+                            </button>
+                            <button>
+                                <img src={japan} alt="imagem do japan." />
+                                <div className="note-text">Japan Travel Planning</div>
+                            </button>
+                            <button>
+                                <img src={japan} alt="imagem do japan." />
+                                <div className="note-text">Japan Travel Planning</div>
                             </button>
 
 
-                        ))}
+
+                        </div>
+                    </div>
+
+                    <div className="edit-nota">
+
+                        <img className="photo" src={rectangle} alt="Rectangle" />
+
+                        {/* <h1><strong>React Performance Optimization</strong></h1> */}
 
 
 
                     </div>
 
-                    <div className="inferior">
-                        <button className="chat2" style={{ "border-top": "1px solid #ccc" }}>
-                            <img src="../assets/imgs/lixeira.svg" alt="lixeira" />
-                            Clear conversations
-                        </button>
-                        <button className="chat2">
-                            <img src="../assets/imgs/sol.svg" alt="sol" />
-                            Ligth mode
-                        </button>
-                        <button className="chat2">
-                            <img src="../assets/imgs/pessoa.svg" alt="pessoa" />
-                            My account
-                        </button>
-                        <button className="chat2">
-                            <img src="../assets/imgs/updates.svg" alt="updates" />
-                            Updates & FAQ
-                        </button>
-                        <button className="chat2">
-                            <img src="../assets/imgs/logout.svg" alt="log out" />
-                            Login
-                        </button>
+                    <div className="end">
+                        <button>Archive Note</button>
+                        <button>Delete Note</button>
                     </div>
-                </div>
-
-
-                <div className="contexto">
-
-                    <img className="logo2" src={logo2} alt="Logo do SenaiGPT" />
-
-                    <table className="tabela">
-                        <thead>
-                            <tr>
-                                <th>
-                                    <img src="../assets/imgs/examples.svg" alt="Examples" />
-                                    Examples
-                                </th>
-                                <th>
-                                    <img src="../assets/imgs/capabilites.svg" alt="Capabilites" />
-                                    Capabilites
-                                </th>
-                                <th>
-                                    <img src="../assets/imgs/limitations.svg" alt="Limitations" />
-                                    Limitations
-                                </th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <button>"Explain quantum computing insimples terms"</button>
-                                </td>
-                                <td>
-                                    <button>Remember what user saidearlier in the conversation.</button>
-                                </td>
-                                <td>
-                                    <button>May occasionally generate incorrect information.</button>
-                                </td>
-
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <button>Remember what user saidearlier in the conversation.</button>
-                                </td>
-                                <td>
-                                    <button>Allows user to provide follow-up corrections.</button>
-                                </td>
-                                <td>
-                                    <button>May occasionally produce harmful instructions or baised content.</button>
-                                </td>
-                            </tr>
-
-
-                            <tr>
-                                <td>
-                                    <button>"How do I make na HTTP requestin Javascript?"</button>
-                                </td>
-                                <td>
-                                    <button>Trainer to decline inappropriate requests.</button>
-                                </td>
-                                <td>
-                                    <button>Limited knowledge of world andevents after 2021.</button>
-                                </td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-
-
-                    <div className="input-container">
-                        <img src="../assets/imgs/microfone.svg" alt="microfone" />
-                        <img src="../assets/imgs/foto.svg" alt="foto" />
-                        <input placeholder="Type a message." type="text" />
-                        <img className="enviar" src="../assets/imgs/enviar.svg" alt="enviar" />
-                    </div>
-
-
 
                 </div>
 
 
-
-            </main>
+            </main >
         </>
 
 

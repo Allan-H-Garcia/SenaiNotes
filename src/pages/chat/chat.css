@@ -8,171 +8,236 @@
 
 }
 
-/* Pagina 2 */
 
-.container2 {
+.container {
     display: flex;
 
 }
 
-.chats {
+img.tag {
+    margin: 10px;
+}
 
-    height: 100vh;
+.tags {
+
+    width: 272px !important;
+    height: 900px;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center;
     display: flex;
-    justify-content: space-between;
-    border-right: 1px solid #ccc;
+    justify-content: space-between; */
+    border-right: 1px solid #E0E4EA;
+    font-family: "Inter";
+    text-decoration: none !important;
+
 
 }
 
+.globo-tags {
 
-.New-chat {
-    background-color: black;
-    padding: 10px;
-    border-radius: 10px;
-    color: white;
-    border: none;
-    width: 14vw;
-    margin: 20px;
-    font-size: 18px;
-    display: flex;
+    /* border: 2px solid black; */
+    /* width: 240px;
+    height: 565px; */
+
     justify-content: center;
-
-}
-
-.chat1 {
-    background-color: #F7F9FB;
-    padding: 12px;
-    border-radius: 8px;
-    color: black;
-    border: none;
-    width: 17vw;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-
-
-}
-
-.chat1 img {
-
-    margin-right: 15px;
-}
-
-
-
-.chat2 {
-    background-color: #F7F9FB;
-    padding: 12px;
-    border-radius: 8px;
-    color: black;
-    border: none;
-    width: 17vw;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-
-}
-
-.chat2 img {
-
-    margin-right: 15px;
-}
-
-
-.contexto {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 180px;
-    width: 100vw;
+    display: flex;
+
 
 }
 
 .logo {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
+    height: 30px;
+    width: 240px;
+    margin: 16px;
 
 
-.tabela th {
-    font-size: 22px;
-    height: 8vh;
-    padding: 10px;
 
 }
 
-.tabela th img {
-    margin-bottom: 20px;
-    display: flex;
+.newNote {
+
+    width: 290px;
+    height: 818px;
     flex-direction: column;
     align-items: center;
-    margin: auto;
-
-
-
-}
-
-.tabela button {
-    background-color: #F7F9FB;
-    padding: 12px;
-    border-radius: 8px;
-    color: black;
-    border: none;
-    width: 17vw;
-    font-size: 16px;
-    height: 7vh;
-
-}
-
-.input-container input {
-
-    padding: 20px;
-    border: none;
-    background-color: #F7F9FB;
-    border-radius: 16px;
-    width: 40vw;
-
-
-}
-
-
-.input-container {
-    height: 7vh;
-    border: none;
-    border-radius: 16px;
-    background-color: #F7F9FB;
     display: flex;
-
-    margin-top: auto;
-    margin-bottom: 40px;
+    justify-content: space-between;
+    border-right: 1px solid #E0E4EA;
+    font-family: "Inter";
 
 
 }
 
-.input-container img {
-    display: flex;
-    flex-direction: row;
+.notes {
+
+    border: 2px solid black;
+    width: 242px;
+    height: 745px;
+
     justify-content: center;
+    display: flex;
+    flex-direction: column;
 
 
 }
 
-/* .input-container img:nth-child(3) {
+.notes button {
+    flex-direction: column;
+    width: 238px;
+    height: 106px;
+    background-color: white;
+    border: none;
+    border-bottom: 1px solid #E0E4EA;
 
-    margin-right: 1000px;
+   
+}
+
+
+.allNotes {
+
+    display: flex;
+    border-bottom: 1px solid #E0E4EA;
+    height: 81px;
+    width: 100%;
+    padding-bottom: 16px;
+
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+
+
+}
+
+
+.middle {
+
+    /* height: 100%;
+    width: 100%; */
+    align-self: flex-start;
+    font-family: "Inter";
+
+}
+
+
+.edit-nota {
+
+
+    height: 819px;
+    width: 878px;
+    /* flex-direction: column; */
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    border-right: 1px solid #E0E4EA;
+    font-family: "Inter";
+    padding: 23px !important;
+
+
+    margin: 0;
+
+    margin-top: -819px;
+    flex-direction: row-reverse;
+
+
+}
+
+
+.edit-nota h1 {
+
+    font-size: 24px;
+}
+
+
+
+.photo {
+
+    margin-top: -644px;
+    display: flex;
+
+
+
+}
+
+.tags button {
+
+    align-items: center;
+    /* justify-content: center; */
+    display: flex;
+    width: 240px;
+    height: 40px;
+    margin: 0px 16px 1px 16px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+
+    font-family: "Inter";
+
+}
+
+.tags p {
+    border-top: 1px solid #E0E4EA;
+    width: 240px;
+    margin: 10px 16px 8px 16px;
+    font-family: "Inter";
+    color: #717784;
+
+
+}
+
+.create {
+    color: white;
+    background-color: blue;
+    margin: 16px;
+    width: 240px;
+    height: 41px;
+    border-radius: 8px;
+    border: none;
+    font-family: "Inter";
+}
+
+/* .end{
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    border-right: 1px solid red;
+    height: 819px;
+    width: 1200px;
+    align-self: flex-start;
 
 } */
 
+.end button {
 
-.enviar {
+    font-family: "Inter";
+    font-size: 14px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 242px !;
+    height: 44px;
+    margin: 10px;
 
-    padding-right: 15px;
+    border-radius: 8px;
+    background-color: white;
+    border: 1px solid #CACFD8;
 
+
+}
+
+.allNotes h1 {
+
+    font-size: 24px;
+    font-family: "Inter";
+    align-items: start;
+    justify-content: center;
+    display: flex;
+    /* padding: 40px; */
+
+
+    align-items: start;
 }

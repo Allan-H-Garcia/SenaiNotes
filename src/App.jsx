@@ -31,6 +31,7 @@ if (token == null){
       <Routes>
         <Route path= "/" element= {<Login/>}></Route>
         <Route path= "/login" element= {<Login/>}></Route>
+        <Route path= "/Chat" element= {<Chat/>}></Route>
         <Route path= "/notes" element= {<Notes/>}></Route>
         <Route path= "*" element= {<h1>Not found </h1>}></Route>
         <Route path="/new-user" element={<NewUser/>}></Route>
