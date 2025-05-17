@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import logo from "../../assets/imgs/LogoWrapper.png";
 import "./chat.css";
 import japan from "../../assets/imgs/japan.png";
-import tag from "../../assets/imgs/Tag.png";
-import home from "../../assets/imgs/Home.svg";
+// import tag from "../../assets/imgs/Tag.png";
 import rectangle from "../../assets/imgs/Rectangle44.png"
+import LeftPanel from "../../components/left-painel";
 // import archive from "../../assets/Archive.svg";
+import enviar from "../../assets/imgs/enviar.png";
+import Delete from "../../assets/imgs/Delete.png"
 
 // import js from "@eslint/js";
 
@@ -55,49 +56,8 @@ function Chat() {
             <main className="container">
                 <div className="tags">
 
-                    <img className="logo" src={logo} alt="Logo do SenaiLogo." />
+                    <LeftPanel />
 
-                    <div className="globo-tags">
-                        <button>
-                            <img className="tag" src={home} alt="." />
-                            All Notes</button>
-                        <button>
-                            <img className="tag" src={home} alt="." />
-                            Archived Notes</button>
-
-                        <p>Tags</p>
-                        <button>
-                            <img className="tag" src={tag} alt="Tag." />
-                            Cooking</button>
-                        <button>
-                            <img className="tag" src={tag} alt="Tag." />
-                            Cooking</button>
-                        <button>
-                            <img className="tag" src={tag} alt="Tag." />
-                            Cooking</button>
-                        <button>
-                            <img className="tag" src={tag} alt="Tag." />
-                            Cooking</button>
-                        <button>
-                            <img className="tag" src={tag} alt="Tag." />
-                            Cooking</button>
-                        <button>
-                            <img className="tag" src={tag} alt="Tag." />
-                            Cooking</button>
-                        <button>
-                            <img className="tag" src={tag} alt="Tag." />
-                            Cooking</button>
-                        <button>
-                            <img className="tag" src={tag} alt="Tag." />
-                            Cooking</button>
-                        <button>
-                            <img className="tag" src={tag} alt="Tag." />
-                            Cooking</button>
-                        <button>
-                            <img className="tag" src={tag} alt="Tag." />
-                            Cooking</button>
-
-                    </div>
                 </div>
 
                 <div className="middle">
@@ -107,14 +67,14 @@ function Chat() {
                         <h1><strong>All Notes</strong></h1>
 
                     </div>
+                    <div className="center">
+                        <div className="newNote">
 
-                    <div className="newNote">
+                            <button className="create">+ Create New Note</button>
 
-                        <button className="create">+ Create New Note</button>
+                            <div className="notes">
 
-                        <div className="notes">
-
-                            {/* <button className="note"> */}
+                                {/* <button className="note"> */}
                                 {/* <img src={japan} alt="Japan" />
                                 <div className="note-content">
                                     <div className="note-title">Japan Travel Planning</div>
@@ -126,54 +86,40 @@ function Chat() {
                                 </div>
                             </button> */}
 
-                            <button>
-                                <img src={japan} alt="imagem do japan." />
-                                <div className="note-text">Japan Travel Planning</div>
-                            </button>
+                                <button>
+                                    <img src={japan} alt="imagem do japan." />
+                                    <div className="note-text">Japan Travel Planning</div>
+                                </button>
 
-                            <button>
-                                <img src={japan} alt="imagem do japan." />
-                                <div className="note-text">Japan Travel Planning</div>
-                            </button>
-                            <button>
-                                <img src={japan} alt="imagem do japan." />
-                                <div className="note-text">Japan Travel Planning</div>
-                            </button>
-                            <button>
-                                <img src={japan} alt="imagem do japan." />
-                                <div className="note-text">Japan Travel Planning</div>
-                            </button>
-                            <button>
-                                <img src={japan} alt="imagem do japan." />
-                                <div className="note-text">Japan Travel Planning</div>
-                            </button>
-                            <button>
-                                <img src={japan} alt="imagem do japan." />
-                                <div className="note-text">Japan Travel Planning</div>
-                            </button>
-                            <button>
-                                <img src={japan} alt="imagem do japan." />
-                                <div className="note-text">Japan Travel Planning</div>
-                            </button>
+                                <button>
+                                    <img src={japan} alt="imagem do japan." />
+                                    <div className="note-text">Japan Travel Planning</div>
+                                </button>
+
+
+
+                            </div>
+                        </div>
+
+                        <div className="edit-nota">
+
+                            <img className="photo" src={rectangle} alt="Rectangle" />
+
+                            {/* <h1><strong>React Performance Optimization</strong></h1> */}
 
 
 
                         </div>
-                    </div>
 
-                    <div className="edit-nota">
-
-                        <img className="photo" src={rectangle} alt="Rectangle" />
-
-                        {/* <h1><strong>React Performance Optimization</strong></h1> */}
-
-
-
-                    </div>
-
-                    <div className="end">
-                        <button>Archive Note</button>
-                        <button>Delete Note</button>
+                        <div className="end">
+                            <button>
+                                <img src={enviar} alt="Enviar" />
+                                Archive Note</button>
+                            <button>
+                                <img src={Delete} alt="Enviar" />
+                                
+                                Delete Note</button>
+                        </div>
                     </div>
 
                 </div>

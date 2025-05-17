@@ -23,9 +23,6 @@ img.tag {
     width: 272px !important;
     height: 900px;
     flex-direction: column;
-    /* align-items: center;
-    display: flex;
-    justify-content: space-between; */
     border-right: 1px solid #E0E4EA;
     font-family: "Inter";
     text-decoration: none !important;
@@ -49,7 +46,7 @@ img.tag {
 
 .logo {
     height: 30px;
-    width: 240px;
+    width: 157px !important;
     margin: 16px;
 
 
@@ -76,7 +73,7 @@ img.tag {
     width: 242px;
     height: 745px;
 
-    
+    justify-content: center;
     display: flex;
     flex-direction: column;
 
@@ -91,7 +88,7 @@ img.tag {
     border: none;
     border-bottom: 1px solid #E0E4EA;
 
-   
+
 }
 
 
@@ -100,8 +97,7 @@ img.tag {
     display: flex;
     border-bottom: 1px solid #E0E4EA;
     height: 81px;
-    width: 1452px;
-
+    width: 100%;
     padding-bottom: 16px;
 
     display: flex;
@@ -114,21 +110,17 @@ img.tag {
 
 .middle {
 
-    /* height: 100%;
-    width: 100%; */
     align-self: flex-start;
     font-family: "Inter";
 
 }
 
 
-
-
 .edit-nota {
 
 
     height: 819px;
-    width: 588px;
+    width: 878px;
     /* flex-direction: column; */
     align-items: center;
     display: flex;
@@ -139,7 +131,7 @@ img.tag {
 
 
     margin: 0;
-    flex-direction: row-reverse;
+
 
 
 }
@@ -199,15 +191,16 @@ img.tag {
     font-family: "Inter";
 }
 
+
 .end button {
 
     font-family: "Inter";
     font-size: 14px;
-    /* flex-direction: column;
+    flex-direction: column;
     align-items: center;
-    justify-content: center; */
+    justify-content: center;
     display: flex;
-    width: 242px !important;
+    width: 242px !;
     height: 44px;
     margin: 10px;
 
@@ -229,8 +222,4 @@ img.tag {
 
 
     align-items: start;
-}
-
-.center {
-    display: flex;
 }

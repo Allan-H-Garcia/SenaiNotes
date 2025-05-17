@@ -5,10 +5,6 @@ import Chat from "./pages/chat";
 import NewUser from "./pages/new-user/index";
 import ForgotPassword from "./pages/forgot/index";
 import ConfirmPassword from "./pages/reset-password";
-import Notes from "./pages/notes";
-
-
-
 
 function App() {
 
@@ -31,8 +27,8 @@ if (token == null){
       <Routes>
         <Route path= "/" element= {<Login/>}></Route>
         <Route path= "/login" element= {<Login/>}></Route>
-        <Route path= "/Chat" element= {<Chat/>}></Route>
-        <Route path= "/notes" element= {<Notes/>}></Route>
+        <Route path= "/chat" element= {<Chat/>}></Route>
+        
         <Route path= "*" element= {<h1>Not found </h1>}></Route>
         <Route path="/new-user" element={<NewUser/>}></Route>
         <Route path="/forgot" element={<ForgotPassword/>}></Route>
