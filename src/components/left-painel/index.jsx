@@ -9,9 +9,9 @@ function LeftPanel() {
     return (  
         <>
 
-            <div> 
+            <div>
 
-            <img className="logo" src={logo} alt="Logo do SenaiLogo." />
+            <img className="logoOne" src={logo} alt="Logo do SenaiLogo." />
 
             <div className="globo-tags">
                 <button>

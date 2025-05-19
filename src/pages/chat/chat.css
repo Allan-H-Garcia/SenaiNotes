@@ -19,13 +19,9 @@ img.tag {
 }
 
 .tags {
-
     width: 272px !important;
     height: 900px;
     flex-direction: column;
-    /* align-items: center;
-    display: flex;
-    justify-content: space-between; */
     border-right: 1px solid #E0E4EA;
     font-family: "Inter";
     text-decoration: none !important;
@@ -34,11 +30,6 @@ img.tag {
 }
 
 .globo-tags {
-
-    /* border: 2px solid black; */
-    /* width: 240px;
-    height: 565px; */
-
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -47,23 +38,14 @@ img.tag {
 
 }
 
-.logo {
-    height: 30px;
-    width: 240px;
-    margin: 16px;
-
-
-
-}
 
 .newNote {
-
     width: 290px;
     height: 818px;
     flex-direction: column;
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    
     border-right: 1px solid #E0E4EA;
     font-family: "Inter";
 
@@ -71,12 +53,8 @@ img.tag {
 }
 
 .notes {
-
-    /* border: 2px solid black; */
     width: 242px;
     height: 745px;
-
-    
     display: flex;
     flex-direction: column;
 
@@ -91,80 +69,138 @@ img.tag {
     border: none;
     border-bottom: 1px solid #E0E4EA;
 
-   
+
 }
 
 
 .allNotes {
-
-    display: flex;
     border-bottom: 1px solid #E0E4EA;
     height: 81px;
-    width: 1452px;
-
-    padding-bottom: 16px;
-
+    width: 1241px;
+    
     display: flex;
     align-items: center;
-    /* justify-content: center; */
+
 
 
 }
 
 
 .middle {
-
-    /* height: 100%;
-    width: 100%; */
     align-self: flex-start;
     font-family: "Inter";
 
 }
 
 
-
-
 .edit-nota {
-
-
-    height: 819px;
     width: 588px;
-    /* flex-direction: column; */
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     border-right: 1px solid #E0E4EA;
     font-family: "Inter";
     padding: 23px !important;
 
 
-    margin: 0;
-    flex-direction: row-reverse;
-
-
 }
 
 
-.edit-nota h1 {
-
+.tittle {
     font-size: 24px;
+
 }
 
-
-
-.photo {
-
-    margin-top: -644px;
+.nameTag {
     display: flex;
+    align-items: center;
+    margin-top: 12px;
+}
 
+.time {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+
+}
+
+.organization {
+    font-size: 14px;
+    font-family: "Inter";
+
+    border-bottom: 1px solid #E0E4EA;
+
+}
+
+.organization img {
+
+    width: 16px;
+    height: 16px;
+    margin: 6px;
+
+}
+
+
+.context {
+    font-size: 14px;
+    font-family: "Inter";
+
+}
+
+.space {
+    margin-left: 62px;
+}
+
+.space-two {
+    margin-left: 21px;
+}
+
+
+.text-content {
+    font-family: "Inter";
+    font-size: 14px;
 
 
 }
+
+
+.list {
+    padding-left: 23px;
+}
+
+
+.saveNote {
+    background-color: #335CFF;
+    color: white;
+    font-family: "Inter";
+    font-size: 14px;
+    border-radius: 8px;
+    width: 99px;
+    height: 41px;
+    border: none;
+}
+
+.cancel {
+    background-color: #F3F5F8;
+    color: #525866;
+    font-family: "Inter";
+    font-size: 14px;
+    border-radius: 8px;
+    width: 99px;
+    height: 41px;
+    border: none;
+    margin-left: 20px;
+
+}
+
+.buttonEdit {
+    border-top: 1px solid #E0E4EA;
+    height: 255px;
+    align-items: end;
+    display: flex;
+}
+
 
 .tags button {
-
     align-items: center;
-    /* justify-content: center; */
     display: flex;
     width: 240px;
     height: 40px;
@@ -200,32 +236,35 @@ img.tag {
 }
 
 .end button {
-
     font-family: "Inter";
     font-size: 14px;
-    /* flex-direction: column;
-    align-items: center;
-    justify-content: center; */
     display: flex;
     width: 242px !important;
     height: 44px;
     margin: 10px;
-
     border-radius: 8px;
     background-color: white;
     border: 1px solid #CACFD8;
+    align-items: center;
+    display: flex;
+    padding-left: 20px;
 
 
 }
 
-.allNotes h1 {
+.end img {
+    width: 20px;
+    height: 20px;
 
+}
+
+.allNotes h1 {
     font-size: 24px;
     font-family: "Inter";
     align-items: start;
     justify-content: center;
     display: flex;
-    /* padding: 40px; */
+
 
 
     align-items: start;
@@ -233,4 +272,75 @@ img.tag {
 
 .center {
     display: flex;
+}
+
+
+
+
+
+
+
+
+.tag-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 242px;
+  height: 91px;
+  padding: 8px;
+  border: none;
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.tag-button:hover {
+  background-color: #f9f9f9;
+}
+
+.tag-button img {
+  width: 57px;
+  height: 75px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.note-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  overflow: hidden;
+}
+
+.note-info h3 {
+  font-size: 13px;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.info {
+  display: flex;
+  gap: 4px;
+  margin: 4px 0;
+  flex-wrap: wrap;
+}
+
+.info span {
+  background-color: #e0e0e0;
+  border-radius: 6px;
+  padding: 2px 6px;
+  font-size: 10px;
+}
+
+.date-info {
+  font-size: 11px;
+  color: #666;
+  margin: 0;
 }
