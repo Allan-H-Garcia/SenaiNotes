@@ -25,6 +25,8 @@ img.tag {
     border-right: 1px solid #E0E4EA;
     font-family: "Inter";
     text-decoration: none !important;
+    padding: 20px;
+
 
 
 }
@@ -45,7 +47,7 @@ img.tag {
     flex-direction: column;
     align-items: center;
     display: flex;
-    
+
     border-right: 1px solid #E0E4EA;
     font-family: "Inter";
 
@@ -77,11 +79,17 @@ img.tag {
     border-bottom: 1px solid #E0E4EA;
     height: 81px;
     width: 1241px;
-    
     display: flex;
     align-items: center;
+    padding-left: 30px;
+
+}
 
 
+.allNotes img {
+    height: 24px;
+    width: 24px;
+    margin-left: 1060px;
 
 }
 
@@ -164,6 +172,7 @@ img.tag {
 
 .list {
     padding-left: 23px;
+    font-family: "Inter";
 }
 
 
@@ -193,7 +202,7 @@ img.tag {
 
 .buttonEdit {
     border-top: 1px solid #E0E4EA;
-    height: 255px;
+    
     align-items: end;
     display: flex;
 }
@@ -204,7 +213,7 @@ img.tag {
     display: flex;
     width: 240px;
     height: 40px;
-    margin: 0px 16px 1px 16px;
+    /* margin: 0px 16px 1px 16px; */
     background-color: white;
     border: none;
     border-radius: 5px;
@@ -217,11 +226,9 @@ img.tag {
 .tags p {
     border-top: 1px solid #E0E4EA;
     width: 240px;
-    margin: 10px 16px 8px 16px;
     font-family: "Inter";
     color: #717784;
-
-
+    padding: 10px
 }
 
 .create {
@@ -239,7 +246,8 @@ img.tag {
     font-family: "Inter";
     font-size: 14px;
     display: flex;
-    width: 242px !important;
+    width: 325px !important;
+
     height: 44px;
     margin: 10px;
     border-radius: 8px;
@@ -261,13 +269,9 @@ img.tag {
 .allNotes h1 {
     font-size: 24px;
     font-family: "Inter";
-    align-items: start;
-    justify-content: center;
-    display: flex;
 
+    margin-bottom: 0px !important;
 
-
-    align-items: start;
 }
 
 .center {
@@ -282,65 +286,65 @@ img.tag {
 
 
 .tag-button {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  width: 242px;
-  height: 91px;
-  padding: 8px;
-  border: none;
-  background-color: white;
-  border-bottom: 1px solid #e0e0e0;
-  text-align: left;
-  cursor: pointer;
-  box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 242px;
+    height: 91px;
+    padding: 8px;
+    border: none;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+    cursor: pointer;
+    box-sizing: border-box;
 }
 
 .tag-button:hover {
-  background-color: #f9f9f9;
+    background-color: #f9f9f9;
 }
 
 .tag-button img {
-  width: 57px;
-  height: 75px;
-  border-radius: 8px;
-  object-fit: cover;
+    width: 57px;
+    height: 75px;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
 .note-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
-  overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    overflow: hidden;
 }
 
 .note-info h3 {
-  font-size: 13px;
-  margin: 0;
-  font-weight: 600;
-  line-height: 1.2;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    font-size: 13px;
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .info {
-  display: flex;
-  gap: 4px;
-  margin: 4px 0;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 4px;
+    margin: 4px 0;
+    flex-wrap: wrap;
 }
 
 .info span {
-  background-color: #e0e0e0;
-  border-radius: 6px;
-  padding: 2px 6px;
-  font-size: 10px;
+    background-color: #e0e0e0;
+    border-radius: 6px;
+    padding: 2px 6px;
+    font-size: 10px;
 }
 
 .date-info {
-  font-size: 11px;
-  color: #666;
-  margin: 0;
+    font-size: 11px;
+    color: #666;
+    margin: 0;
 }

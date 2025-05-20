@@ -4,12 +4,13 @@ import japan from "../../assets/imgs/japan.png";
 // import tag from "../../assets/imgs/Tag.png";
 import rectangle from "../../assets/imgs/Rectangle44.png"
 import LeftPanel from "../../components/left-painel";
-// import archive from "../../assets/Archive.svg";
+import archive from "../../assets/imgs/Archive.png";
 import enviar from "../../assets/imgs/enviar.png";
 import Delete from "../../assets/imgs/Delete.png";
 import clock from "../../assets/imgs/CircleClock.png";
 import tag from "../../assets/imgs/Tag.png";
-
+import login from "../../assets/imgs/login.png";
+// import config from "../../assets/imgs/config.png";
 // import js from "@eslint/js";
 
 function Chat() {
@@ -68,12 +69,16 @@ function Chat() {
 
                         <h1><strong>All Notes</strong></h1>
 
+                        {/* <img src={config} alt="Configuração." /> */}
+                        <img src={login} alt="Login." />
+
+                       
                     </div>
                     <div className="center">
                         <div className="newNote">
 
                             <button className="create">+ Create New Note</button>
-                          
+
 
                             <button class="tag-button">
                                 <img src={japan} alt="imagem do japan." />
@@ -119,6 +124,8 @@ function Chat() {
 
                             <p className="tittle"><strong>React Performance Optimization</strong></p>
 
+                            
+
                             <div className="organization">
                                 <div className="nameTag">
                                     <img className="tag" src={tag} alt="." />
@@ -159,6 +166,7 @@ function Chat() {
                                         </li>
                                     </ol> <br></br>
                                     <p>TODO:Benchmark current application and identify bottlenecks</p>
+
                                     <div className="buttonEdit">
                                         <button className="saveNote">Save note</button>
                                         <button className="cancel">Cancel</button>
@@ -172,7 +180,7 @@ function Chat() {
 
                         <div className="end">
                             <button>
-                                <img src={Delete} alt="Enviar" />
+                                <img src={archive} alt="Enviar" />
                                 Archive Note</button>
                             <button>
                                 <img src={Delete} alt="Enviar" />
