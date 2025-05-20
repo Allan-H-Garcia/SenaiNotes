@@ -11,7 +11,7 @@ function LeftPanel() {
 
             <div>
 
-            <img className="logoOne" src={logo} alt="Logo do SenaiLogo." />
+            <img className="logo-one" src={logo} alt="Logo do SenaiLogo." />
 
             <div className="globo-tags">
                 <button>
@@ -19,7 +19,7 @@ function LeftPanel() {
                     All Notes</button>
                 <button>
                     <img className="tag" src={home} alt="." />
-                    Archived Notes</button>
+                    Archived Notes</button> 
 
                 <p>Tags</p>
                 <button>

@@ -4,12 +4,13 @@ import japan from "../../assets/imgs/japan.png";
 // import tag from "../../assets/imgs/Tag.png";
 import rectangle from "../../assets/imgs/Rectangle44.png";
 import LeftPanel from "../../components/left-painel";
-// import archive from "../../assets/Archive.svg";
+import archive from "../../assets/imgs/Archive.png";
 import enviar from "../../assets/imgs/enviar.png";
 import Delete from "../../assets/imgs/Delete.png";
 import clock from "../../assets/imgs/CircleClock.png";
 import tag from "../../assets/imgs/Tag.png";
-
+import login from "../../assets/imgs/login.png";
+// import config from "../../assets/imgs/config.png";
 // import js from "@eslint/js";
 
 function Chat() {
