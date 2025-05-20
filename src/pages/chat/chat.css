@@ -104,15 +104,20 @@ img.tag {
 }
 
 
-.tittle {
+.note-tittle {
     font-size: 24px;
+    border: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 20px;
 
 }
 
-.nameTag {
-    display: flex;
+.tag-input {
+   margin-left: 5px;
     align-items: center;
     margin-top: 12px;
+    border: none;
 }
 
 .time {
@@ -343,4 +348,9 @@ img.tag {
   font-size: 11px;
   color: #666;
   margin: 0;
+}
+
+.corpo-notas{
+height: 437px;
+ width: 553px;
 }
