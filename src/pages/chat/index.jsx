@@ -14,20 +14,20 @@ import login from "../../assets/imgs/login.png";
 // import js from "@eslint/js";
 
 function Chat() {
-  const [chats, setChats] = useState([]);
-  const [chatSelecionado, setChatSelecionado] = useState(null);
+  const [notas, setNotas] = useState([]);
+  const [NotaSelecionado, setNotaSelecionado] = useState(null);
 
   useEffect(() => {
     //Executada toda vez que a tela abre.
-    getChats();
+    getNotas();
   }, []);
 
-  const getChats = async () => {
+  const getNotas = async () => {
     // Arrow Funtion
-    let response = await fetch("https://senai-gpt-api.azurewebsite.net/chats", {
+    let response = await fetch("http://localhost:3000/notes", {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("meuToken"),
-        //Bearer: é o tipo de autenticação
+        //Bearer: é o tipo de autenticaçãonpm
       },
     });
 
@@ -36,19 +36,27 @@ function Chat() {
     if (response.ok == true) {
       let json = await response.json(); // Pegue as informaçoes dos chats
 
-      setChats(json);
+      setNotas(json);
     } else {
-      if (response.status == 401)
-        alert("Token invalido. Faça o login novamente.");
+      if (response.status == 401);
       window.location.href = "/login";
     }
   };
 
-  const clickchat = (chats) => {
-    setChatSelecionado(chats);
+  const clickNotas = (nota) => {
+    setNotaSelecionado(nota);
   };
 
-  return (  
+  const NovoNota = async () => {
+    let novoTitulo = <div className="tittle"></div>;
+    let tag = <div className="tag-input"></div>;
+    let descricao = <div className="corpo-nota"></div>;
+    if (novoTitulo == null || novoTitulo == "") {
+      return;
+    }
+  };
+
+  return (
     <>
       <main className="container">
         <div className="tags">
@@ -63,12 +71,15 @@ function Chat() {
           </div>
           <div className="center">
             <div className="newNote">
-              <button className="create" onClick={() => NovoChat()}>
+              <button className="create" onClick={() => NovoNota (notas)}>
                 + Create New Note
               </button>
 
-              {chats.map((chat) => (
-                <button className="tag-button" onClick={() => clickchat(chat)}>
+              {notas.map((nota) => (
+                <button
+                  className="tag-button"
+                  onClick={() => clickNotas(notas)}
+                >
                   <img src={japan} alt="imagem do japan." />
                   <div className="note-info">
                     <h3>Japan Travel Planning</h3>
@@ -121,14 +132,22 @@ function Chat() {
               <img className="photo" src={rectangle} alt="Rectangle" />
 
               <div className="tittle">
-                <input type="text" class="note-tittle" placeholder="Digite o titulo"/>
+                <input
+                  type="text"
+                  class="note-tittle"
+                  placeholder="Digite o titulo"
+                />
               </div>
 
               <div className="organization">
                 <div className="nameTag">
                   <img className="tag" src={tag} alt="." />
                   <span>Tags</span>
-                   <input type="text" class="tag-input" placeholder="Inisira uma tag"/>
+                  <input
+                    type="text"
+                    class="tag-input"
+                    placeholder="Inisira uma tag"
+                  />
                 </div>
 
                 <div className="time">
@@ -139,8 +158,12 @@ function Chat() {
               </div>
 
               <div className="text-content">
-              <textarea className="corpo-notas" name="corpo-notas" id="" placeholder="Digite sua anotaçao"></textarea>
-
+                <textarea
+                  className="corpo-notas"
+                  name="corpo-notas"
+                  id=""
+                  placeholder="Digite sua anotaçao"
+                ></textarea>
               </div>
             </div>
 
@@ -160,4 +183,5 @@ function Chat() {
     </>
   );
 }
+
 export default Chat;

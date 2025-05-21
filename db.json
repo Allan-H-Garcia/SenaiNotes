@@ -2,16 +2,128 @@
   "users": [
     {
       "id": "1",
-      "name": "Jaquelline",
-      "email": "jaquelline@gmail.com",
-      "passoword": "12345678"
+      "name": "Ariel",
+      "email": "ariel@email.com",
+      "password": "12345678"
     },
     {
-      "id": "ecf8",
+      "id": "a462",
       "name": "Teste",
       "email": "teste@email.com",
-      "passoword": "12345678"
+      "password": "12345678"
+    },
+    {
+      "id": "c4b7",
+      "email": "a@a.com",
+      "password": "123"
+    },
+    {
+      "id": "f176",
+      "email": "b@b.com",
+      "password": "123"
+    }
+  ],
+  "tags": [
+    {
+      "name": "React",
+      "id": "7b8e"
+    },
+    {
+      "name": "Node",
+      "id": "c565"
+    },
+    {
+      "name": "JavaScript",
+      "id": "3338"
+    },
+    {
+      "name": "CSS",
+      "id": "52fe"
+    },
+    {
+      "name": "HTML",
+      "id": "db30"
+    }
+  ],
+  "notes": [
+    {
+      "id": "9999",
+      "userId": "1",
+      "title": "React Development 2.0",
+      "description": "Texto 2.",
+      "image": "assets/sample.png",
+      "tags": [
+        "Dev",
+        "Teste"
+      ],
+      "date": "2025-05-19T22:52:52.331Z",
+      "archived": true
+    },
+    {
+      "id": "d7b9",
+      "userId": "1",
+      "title": "Node Development",
+      "description": "Texto 2.",
+      "image": "assets/sample.png",
+      "tags": [
+        "Node",
+        "    Teste"
+      ],
+      "date": "2025-05-19T18:44:08.198Z"
+    },
+    {
+      "id": "af12",
+      "userId": "1",
+      "title": "JavaScript Development",
+      "description": "Texto",
+      "image": "assets/sample.png",
+      "tags": [
+        "JavaScript"
+      ],
+      "date": "2025-05-19T16:57:26.196Z"
+    },
+    {
+      "id": "415b",
+      "userId": "1",
+      "title": "CSS Development",
+      "description": "Texto",
+      "image": "assets/sample.png",
+      "tags": [
+        "CSS"
+      ],
+      "date": "2025-05-19T16:53:53.996Z"
+    },
+    {
+      "title": "HTML Development",
+      "userId": "1",
+      "description": "Texto",
+      "image": "assets/sample.png",
+      "tags": [
+        "HTML"
+      ],
+      "date": "29 Oct, 2024",
+      "id": "7375",
+      "archived": true
+    },
+    {
+      "id": "27f2",
+      "userId": "1",
+      "title": "Nova anotação",
+      "description": "Escreva aqui sua descrição",
+      "tags": [],
+      "image": "assets/sample.png",
+      "date": "2025-05-19T19:58:19.516Z"
+    },
+    {
+      "id": "4471",
+      "userId": "1",
+      "title": "Nova anotaçãoasdasd",
+      "description": "Escreva aqui sua descriçãoasdasda",
+      "tags": [
+        "ahsdkjsahdasd"
+      ],
+      "image": "assets/sample.png",
+      "date": "2025-05-19T22:57:31.162Z"
     }
   ]
-
 }

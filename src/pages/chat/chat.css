@@ -50,6 +50,7 @@ img.tag {
 
     border-right: 1px solid #E0E4EA;
     font-family: "Inter";
+    overflow: auto;
 
 
 }
@@ -355,7 +356,7 @@ img.tag {
 }
 
 .corpo-notas{
-height: 437px;
+height: 300px;
  width: 553px;
     font-size: 11px;
     color: #666;
