@@ -59,7 +59,7 @@ function Chat() {
     let userId = localStorage.getItem("meuId");
 
     let nNota = {
-      title: "Nova nota",
+      title: "",
       description: "",
       tags:[],
     };
