@@ -47,14 +47,45 @@ function Chat() {
     setNotaSelecionado(nota);
   };
 
+
+
   const NovoNota = async () => {
-    let novoTitulo = <div className="tittle"></div>;
-    let tag = <div className="tag-input"></div>;
-    let descricao = <div className="corpo-nota"></div>;
+    let novoTitulo = prompt("Insira o titulo do chat:");
     if (novoTitulo == null || novoTitulo == "") {
+      alert("Insira um titulo");
       return;
     }
+
+    let userId = localStorage.getItem("meuId");
+
+    let nNota = {
+      title: "Nova nota",
+      description: "",
+      tags:[],
+    };
+
+      
+    setNotaSelecionado(nNota);
+    
+
+    let response = await fetch(
+      "http://localhost:3000/notes",
+      {
+        method: "POST",
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("meutoken"),
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(nNota),
+      }
+    );
+
+    if (response.ok) {
+      return nNota;
+    }
   };
+
+  
 
   return (
     <>
@@ -71,7 +102,7 @@ function Chat() {
           </div>
           <div className="center">
             <div className="newNote">
-              <button className="create" onClick={() => NovoNota (notas)}>
+              <button className="create" onClick={() => NovoNota(notas)}>
                 + Create New Note
               </button>
 
@@ -82,7 +113,7 @@ function Chat() {
                 >
                   <img src={japan} alt="imagem do japan." />
                   <div className="note-info">
-                    <h3>Japan Travel Planning</h3>
+                    <h3>{nota.title}</h3>
                     <div className="info">
                       <span>Travel</span>
                       <span>Personal</span>
@@ -91,41 +122,7 @@ function Chat() {
                   </div>
                 </button>
               ))}
-              <button className="tag-button">
-                <img src={japan} alt="imagem do japan." />
-                <div className="note-info">
-                  <h3>Japan Travel Planning</h3>
-                  <div className="info">
-                    <span>Travel</span>
-                    <span>Personal</span>
-                  </div>
-                  <p className="date-info">28 Oct 2024</p>
-                </div>
-              </button>
-
-              <button className="tag-button">
-                <img src={japan} alt="imagem do japan." />
-                <div className="note-info">
-                  <h3>Japan Travel Planning</h3>
-                  <div className="info">
-                    <span>Travel</span>
-                    <span>Personal</span>
-                  </div>
-                  <p className="date-info">28 Oct 2024</p>
-                </div>
-              </button>
-
-              <button className="tag-button">
-                <img src={japan} alt="imagem do japan." />
-                <div className="note-info">
-                  <h3>Japan Travel Planning</h3>
-                  <div className="info">
-                    <span>Travel</span>
-                    <span>Personal</span>
-                  </div>
-                  <p className="date-info">28 Oct 2024</p>
-                </div>
-              </button>
+ 
             </div>
 
             <div className="edit-nota">
@@ -164,6 +161,10 @@ function Chat() {
                   id=""
                   placeholder="Digite sua anotaçao"
                 ></textarea>
+              </div>
+              <div className="buttonEdit">
+                <button className="saveNote">Save note</button>
+                <button className="cancel">Cancel</button>
               </div>
             </div>
 
