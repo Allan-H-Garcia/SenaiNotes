@@ -128,6 +128,8 @@ img.tag {
     margin-top: 12px;
     border: none;
     font-family: "Inter";
+    border: none;
+    outline: none;
 }
 
 .time {
@@ -214,6 +216,9 @@ img.tag {
 
     align-items: end;
     display: flex;
+    padding: 16px 24px;
+
+
 }
 
 
@@ -360,10 +365,12 @@ img.tag {
 
 .corpo-notas {
     height: 300px;
-    width: 553px;
+    width: 541px;
     font-size: 14px;
     color: #666;
     margin: 0;
     font-family: "Inter";
     margin-top: 20px;
+    border: none;
+    outline: none;
 }

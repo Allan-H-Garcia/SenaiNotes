@@ -132,7 +132,7 @@ function Chat() {
                 <input
                   type="text"
                   class="note-tittle"
-                  placeholder="Digite o titulo"
+                  placeholder="Adicione um título"
                 />
               </div>
 
@@ -143,7 +143,7 @@ function Chat() {
                   <input
                     type="text"
                     class="tag-input"
-                    placeholder="Inisira uma tag"
+                    placeholder="Adicione uma tag"
                   />
                 </div>
 
@@ -159,7 +159,7 @@ function Chat() {
                   className="corpo-notas"
                   name="corpo-notas"
                   id=""
-                  placeholder="Digite sua anotaçao"
+                  placeholder="Escreva suas anotações aqui!"
                 ></textarea>
               </div>
               <div className="buttonEdit">
