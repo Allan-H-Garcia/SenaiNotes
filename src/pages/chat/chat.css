@@ -123,10 +123,11 @@ img.tag {
 }
 
 .tag-input {
-   margin-left: 5px;
+    margin-left: 61px;
     align-items: center;
     margin-top: 12px;
     border: none;
+    font-family: "Inter";
 }
 
 .time {
@@ -171,6 +172,8 @@ img.tag {
 .text-content {
     font-family: "Inter";
     font-size: 14px;
+    align-items: center;
+    display: flex;
 
 
 }
@@ -208,7 +211,7 @@ img.tag {
 
 .buttonEdit {
     border-top: 1px solid #E0E4EA;
-    
+
     align-items: end;
     display: flex;
 }
@@ -350,15 +353,17 @@ img.tag {
 }
 
 .date-info {
-  font-size: 11px;
-  color: #666;
-  margin: 0;
-}
-
-.corpo-notas{
-height: 300px;
- width: 553px;
     font-size: 11px;
     color: #666;
     margin: 0;
+}
+
+.corpo-notas {
+    height: 300px;
+    width: 553px;
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    font-family: "Inter";
+    margin-top: 20px;
 }
