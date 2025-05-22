@@ -170,7 +170,7 @@ function Chat() {
 
             <div className="end">
               <button>
-                <img src={Delete} alt="Enviar" />
+                <img src={archive} alt="Enviar" />
                 Archive Note
               </button>
               <button>
