@@ -214,12 +214,13 @@ img.tag {
 }
 
 .buttonEdit {
+    margin-top: 25px;
     border-top: 1px solid #E0E4EA;
-
     align-items: end;
     display: flex;
     padding: 16px 24px;
-
+display: flex;
+justify-content: start;
 
 }
 
@@ -366,8 +367,8 @@ img.tag {
 }
 
 .corpo-notas {
-    height: 300px;
-    width: 541px;
+    height: 415px;
+    width: 524px;
     font-size: 14px;
     color: #666;
     margin: 0;
@@ -375,4 +376,5 @@ img.tag {
     margin-top: 20px;
     border: none;
     outline: none;
+    
 }
