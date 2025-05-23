@@ -253,7 +253,7 @@ justify-content: start;
     background-color: blue;
     margin: 16px;
     width: 240px;
-    height: 41px;
+    height: 41px !important;
     border-radius: 8px;
     border: none;
     font-family: "Inter";

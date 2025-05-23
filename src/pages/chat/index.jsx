@@ -55,74 +55,80 @@ function Chat() {
     setNotaSelecionado(nota);
   };
 
- const NovoNota = async () => {
-  let novoTitulo = prompt("Insira o título do chat:");
-  if (!novoTitulo) {
-    alert("Insira um título");
-    return;
-  }
+  const NovoNota = async () => {
+    let novoTitulo = prompt("Insira o título do chat:");
+    if (!novoTitulo) {
+      alert("Insira um título");
+      return;
+    }
 
-  let nNota = {
-    title: novoTitulo,
-    description: "",
-    tags: [],
-    time: "",
+    let nNota = {
+      title: novoTitulo,
+      description: "",
+      tags: [],
+      time: "",
+    };
+
+    let response = await fetch("http://localhost:3000/notes", {
+      method: "POST",
+      headers: {
+        Authorization: "Bearer " + localStorage.getItem("meuToken"),
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(nNota),
+    });
+
+    if (response.ok) {
+      const notaCriada = await response.json(); // essa deve ter o `id`
+      setNotaSelecionado(notaCriada);
+      getNotas(); // atualiza a lista na tela
+    } else {
+      console.error("Erro ao criar a nota.");
+    }
   };
 
-  let response = await fetch("http://localhost:3000/notes", {
-    method: "POST",
-    headers: {
-      Authorization: "Bearer " + localStorage.getItem("meuToken"),
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(nNota),
-  });
 
-  if (response.ok) {
-    const notaCriada = await response.json(); // essa deve ter o `id`
-    setNotaSelecionado(notaCriada);
-    getNotas(); // atualiza a lista na tela
-  } else {
-    console.error("Erro ao criar a nota.");
-  }
-};
+  const salvarNota = async () => {
+    if (!NotaSelecionado) {
+      alert("Nenhuma nota selecionada.");
+      return;
+    }
 
+    const notaParaSalvar = {
+      ...NotaSelecionado,
+      image: "assets/sample.png",
+      date: new Date().toISOString(),
+    };
 
-const salvarNota = async () => {
-  if (!NotaSelecionado) {
-    alert("Nenhuma nota selecionada.");
-    return;
-  }
+    const method = NotaSelecionado.id ? "PUT" : "POST";
+    const url = NotaSelecionado.id
+      ? `http://localhost:3000/notes/${NotaSelecionado.id}`
+      : `http://localhost:3000/notes`;
 
-  const notaParaSalvar = {
-    ...NotaSelecionado,
-    image: "assets/sample.png",
-    date: new Date().toISOString(),
+    const response = await fetch(url, {
+      method,
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + localStorage.getItem("meuToken"),
+      },
+      body: JSON.stringify(notaParaSalvar),
+    });
+
+    if (response.ok) {
+      const notaAtualizada = await response.json();
+      setNotaSelecionado(notaAtualizada);
+      getNotas();
+      console.log("Nota salva com sucesso!");
+    } else {
+      console.error("Erro ao salvar a nota.");
+    }
   };
 
-  const method = NotaSelecionado.id ? "PUT" : "POST";
-  const url = NotaSelecionado.id
-    ? `http://localhost:3000/notes/${NotaSelecionado.id}`
-    : `http://localhost:3000/notes`;
-
-  const response = await fetch(url, {
-    method,
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: "Bearer " + localStorage.getItem("meuToken"),
-    },
-    body: JSON.stringify(notaParaSalvar),
-  });
-
-  if (response.ok) {
-    const notaAtualizada = await response.json();
-    setNotaSelecionado(notaAtualizada);
-    getNotas();
-    console.log("Nota salva com sucesso!");
-  } else {
-    console.error("Erro ao salvar a nota.");
-  }
-};
+  const dataAtual = new Date().toLocaleDateString('en-GB', {
+  day: '2-digit',
+  month: 'short',
+  year: 'numeric',
+});
 
 
 
@@ -170,7 +176,7 @@ const salvarNota = async () => {
                 <input
                   type="text"
                   className="note-tittle"
-                  placeholder="Adicione um título"
+                  placeholder="Insert a title"
                   value={NotaSelecionado?.title}
                   onChange={event => setNotaSelecionado({ ...NotaSelecionado, title: event.target.value })}
                 />
@@ -183,7 +189,7 @@ const salvarNota = async () => {
                   <input
                     type="text"
                     className="tag-input"
-                    placeholder="Adicione uma tag"
+                    placeholder="Tag your post"
                     value={NotaSelecionado?.tags}
                     onChange={event => setNotaSelecionado({ ...NotaSelecionado, tags: event.target.value })}
                   />
@@ -192,9 +198,8 @@ const salvarNota = async () => {
                 <div className="time">
                   <img className="clock" src={clock} alt="." />
                   <span>Last edited</span>
-                  <span className="space-two">29 Oct 2024
-                    value={NotaSelecionado?.time}
-                    onChange={event => setNotaSelecionado({ ...NotaSelecionado, time: event.target.value })}
+                  <span className="space-two">
+                    {dataAtual}
                   </span>
                 </div>
               </div>
@@ -204,13 +209,13 @@ const salvarNota = async () => {
                   className="corpo-notas"
                   name="corpo-notas"
                   id=""
-                  placeholder="Escreva suas anotações aqui!"
+                  placeholder="Add your notes here!"
                   value={NotaSelecionado?.description}
                   onChange={event => setNotaSelecionado({ ...NotaSelecionado, description: event.target.value })}
                 ></textarea>
               </div>
               <div className="buttonEdit">
-                <button className="saveNote"onClick={salvarNota}>
+                <button className="saveNote" onClick={salvarNota}>
                   Save note
                 </button>
                 <button className="cancel">Cancel</button>
