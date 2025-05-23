@@ -24,16 +24,16 @@ function LeftPanel() {
                 <p>Tags</p>
                 <button>
                     <img className="tag" src={tag} alt="Tag." />
-                    Cooking</button>
+                    Asia Travel</button>
                 <button>
                     <img className="tag" src={tag} alt="Tag." />
-                    Cooking</button>
+                    Asia Travel</button>
                 <button>
                     <img className="tag" src={tag} alt="Tag." />
-                    Cooking</button>
+                    Asia Travel</button>
                 <button>
                     <img className="tag" src={tag} alt="Tag." />
-                    Cooking</button>
+                    Asia Travel</button>
 
 
 

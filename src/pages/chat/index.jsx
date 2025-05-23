@@ -78,6 +78,7 @@ function Chat() {
     }
   };
 
+<<<<<<< HEAD
   const salvarNota = async () => {
     if (!NotaSelecionado) {
       alert("Nenhuma nota selecionada.");
@@ -137,6 +138,50 @@ const deleteNota = async () => {
 };
  
 // const arquivarNota = async () => {
+=======
+
+  const salvarNota = async () => {
+    if (!NotaSelecionado) {
+      alert("Nenhuma nota selecionada.");
+      return;
+    }
+
+    const notaParaSalvar = {
+      ...NotaSelecionado,
+      image: "assets/sample.png",
+      date: new Date().toISOString(),
+    };
+
+    const method = NotaSelecionado.id ? "PUT" : "POST";
+    const url = NotaSelecionado.id
+      ? `http://localhost:3000/notes/${NotaSelecionado.id}`
+      : `http://localhost:3000/notes`;
+
+    const response = await fetch(url, {
+      method,
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + localStorage.getItem("meuToken"),
+      },
+      body: JSON.stringify(notaParaSalvar),
+    });
+
+    if (response.ok) {
+      const notaAtualizada = await response.json();
+      setNotaSelecionado(notaAtualizada);
+      getNotas();
+      console.log("Nota salva com sucesso!");
+    } else {
+      console.error("Erro ao salvar a nota.");
+    }
+  };
+
+  const dataAtual = new Date().toLocaleDateString('en-GB', {
+  day: '2-digit',
+  month: 'short',
+  year: 'numeric',
+});
+>>>>>>> 6d7ee8044a7fde0dd36c8e699368c2fb72e141f0
 
 //     const res = await fetch(`http://localhost:3000/notes/${NotaSelecionado.id}`, {
 //       method: "PATCH",
@@ -189,7 +234,7 @@ const deleteNota = async () => {
                 <input
                   type="text"
                   className="note-tittle"
-                  placeholder="Adicione um título"
+                  placeholder="Insert a title"
                   value={NotaSelecionado?.title}
                   onChange={(event) =>
                     setNotaSelecionado({
@@ -207,7 +252,7 @@ const deleteNota = async () => {
                   <input
                     type="text"
                     className="tag-input"
-                    placeholder="Adicione uma tag"
+                    placeholder="Tag your post"
                     value={NotaSelecionado?.tags}
                     onChange={(event) =>
                       setNotaSelecionado({
@@ -222,6 +267,7 @@ const deleteNota = async () => {
                   <img className="clock" src={clock} alt="." />
                   <span>Last edited</span>
                   <span className="space-two">
+<<<<<<< HEAD
                     29 Oct 2024 value={NotaSelecionado?.time}
                     onChange=
                     {(event) =>
@@ -230,6 +276,9 @@ const deleteNota = async () => {
                         time: event.target.value,
                       })
                     }
+=======
+                    {dataAtual}
+>>>>>>> 6d7ee8044a7fde0dd36c8e699368c2fb72e141f0
                   </span>
                 </div>
               </div>
@@ -239,7 +288,7 @@ const deleteNota = async () => {
                   className="corpo-notas"
                   name="corpo-notas"
                   id=""
-                  placeholder="Escreva suas anotações aqui!"
+                  placeholder="Add your notes here!"
                   value={NotaSelecionado?.description}
                   onChange={(event) =>
                     setNotaSelecionado({
