@@ -55,60 +55,77 @@ function Chat() {
     setNotaSelecionado(nota);
   };
 
-  const NovoNota = async () => {
-    let novoTitulo = prompt("Insira o titulo do chat:");
-    if (novoTitulo == null || novoTitulo == "") {
-      alert("Insira um titulo");
-      return;
-    }
+ const NovoNota = async () => {
+  let novoTitulo = prompt("Insira o título do chat:");
+  if (!novoTitulo) {
+    alert("Insira um título");
+    return;
+  }
 
-    let userId = localStorage.getItem("meuId");
-
-    let nNota = {
-      title: novoTitulo,
-      description: "",
-      tags: [],
-    };
-
-    setNotaSelecionado(nNota);
-
-    let response = await fetch("http://localhost:3000/notes", {
-      method: "POST",
-      headers: {
-        Authorization: "Bearer " + localStorage.getItem("meutoken"),
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(nNota),
-    });
-
-    if (response.ok) {
-      return nNota;
-    }
+  let nNota = {
+    title: novoTitulo,
+    description: "",
+    tags: [],
+    time: "",
   };
 
-  // const salvarNota = async () => {
-  //   const response = await fetch(`http://localhost:3000/notes/${NotaSelecionado.id}`, {
-  //   method: "PUT",
-  //   headers: { "Content-Type": "application/json" },
-  //   body: JSON.stringify({
-  //     ...NotaSelecionado,
-  //     title,
-  //     description,
-  //     tags: tags.split(",").map(t => t.trim()),
-  //     image: "assets/sample.png",
-  //     date: new Date().toISOString(),
-  //   }),
-  // });
+  let response = await fetch("http://localhost:3000/notes", {
+    method: "POST",
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("meuToken"),
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(nNota),
+  });
 
-  // if (response.ok) {
-  //   console.log("Nota salva com sucesso!");
-  // } else {
-  //   console.error("Erro ao salvar a nota.");
-  // }
-  // };
+  if (response.ok) {
+    const notaCriada = await response.json(); // essa deve ter o `id`
+    setNotaSelecionado(notaCriada);
+    getNotas(); // atualiza a lista na tela
+  } else {
+    console.error("Erro ao criar a nota.");
+  }
+};
 
 
-  
+const salvarNota = async () => {
+  if (!NotaSelecionado) {
+    alert("Nenhuma nota selecionada.");
+    return;
+  }
+
+  const notaParaSalvar = {
+    ...NotaSelecionado,
+    image: "assets/sample.png",
+    date: new Date().toISOString(),
+  };
+
+  const method = NotaSelecionado.id ? "PUT" : "POST";
+  const url = NotaSelecionado.id
+    ? `http://localhost:3000/notes/${NotaSelecionado.id}`
+    : `http://localhost:3000/notes`;
+
+  const response = await fetch(url, {
+    method,
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("meuToken"),
+    },
+    body: JSON.stringify(notaParaSalvar),
+  });
+
+  if (response.ok) {
+    const notaAtualizada = await response.json();
+    setNotaSelecionado(notaAtualizada);
+    getNotas();
+    console.log("Nota salva com sucesso!");
+  } else {
+    console.error("Erro ao salvar a nota.");
+  }
+};
+
+
+
   return (
     <>
       <main className="container">
@@ -167,13 +184,18 @@ function Chat() {
                     type="text"
                     className="tag-input"
                     placeholder="Adicione uma tag"
+                    value={NotaSelecionado?.tags}
+                    onChange={event => setNotaSelecionado({ ...NotaSelecionado, tags: event.target.value })}
                   />
                 </div>
 
                 <div className="time">
                   <img className="clock" src={clock} alt="." />
                   <span>Last edited</span>
-                  <span className="space-two">29 Oct 2024</span>
+                  <span className="space-two">29 Oct 2024
+                    value={NotaSelecionado?.time}
+                    onChange={event => setNotaSelecionado({ ...NotaSelecionado, time: event.target.value })}
+                  </span>
                 </div>
               </div>
 
@@ -183,10 +205,12 @@ function Chat() {
                   name="corpo-notas"
                   id=""
                   placeholder="Escreva suas anotações aqui!"
+                  value={NotaSelecionado?.description}
+                  onChange={event => setNotaSelecionado({ ...NotaSelecionado, description: event.target.value })}
                 ></textarea>
               </div>
               <div className="buttonEdit">
-                <button className="saveNote">
+                <button className="saveNote"onClick={salvarNota}>
                   Save note
                 </button>
                 <button className="cancel">Cancel</button>
