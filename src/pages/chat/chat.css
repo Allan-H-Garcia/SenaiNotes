@@ -48,7 +48,7 @@ img.tag {
     align-items: center;
     display: flex;
 
-    border-right: 1px solid #E0E4EA;
+    border-right: 1px solid #E0E4EA ;
     font-family: "Inter";
     overflow: auto;
 
@@ -108,7 +108,7 @@ img.tag {
     border-right: 1px solid #E0E4EA;
     font-family: "Inter";
     padding: 23px !important;
-
+    
 
 }
 

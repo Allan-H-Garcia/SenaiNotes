@@ -22,6 +22,14 @@ function Chat() {
     getNotas();
   }, []);
 
+  // useEffect(() => {
+  //   if (NotaSelecionado) {
+  //     setTitle(NotaSelecionado.title);
+  //     setTags(NotaSelecionado.tags.join(", "));
+  //     setDescription(NotaSelecionado.description);
+  //   }
+  // }, [NotaSelecionado]);
+
   const getNotas = async () => {
     // Arrow Funtion
     let response = await fetch("http://localhost:3000/notes", {
@@ -47,8 +55,6 @@ function Chat() {
     setNotaSelecionado(nota);
   };
 
-
-
   const NovoNota = async () => {
     let novoTitulo = prompt("Insira o titulo do chat:");
     if (novoTitulo == null || novoTitulo == "") {
@@ -59,34 +65,50 @@ function Chat() {
     let userId = localStorage.getItem("meuId");
 
     let nNota = {
-      title: "",
+      title: novoTitulo,
       description: "",
-      tags:[],
+      tags: [],
     };
 
-      
     setNotaSelecionado(nNota);
-    
 
-    let response = await fetch(
-      "http://localhost:3000/notes",
-      {
-        method: "POST",
-        headers: {
-          Authorization: "Bearer " + localStorage.getItem("meutoken"),
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(nNota),
-      }
-    );
+    let response = await fetch("http://localhost:3000/notes", {
+      method: "POST",
+      headers: {
+        Authorization: "Bearer " + localStorage.getItem("meutoken"),
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(nNota),
+    });
 
     if (response.ok) {
       return nNota;
     }
   };
 
-  
+  // const salvarNota = async () => {
+  //   const response = await fetch(`http://localhost:3000/notes/${NotaSelecionado.id}`, {
+  //   method: "PUT",
+  //   headers: { "Content-Type": "application/json" },
+  //   body: JSON.stringify({
+  //     ...NotaSelecionado,
+  //     title,
+  //     description,
+  //     tags: tags.split(",").map(t => t.trim()),
+  //     image: "assets/sample.png",
+  //     date: new Date().toISOString(),
+  //   }),
+  // });
 
+  // if (response.ok) {
+  //   console.log("Nota salva com sucesso!");
+  // } else {
+  //   console.error("Erro ao salvar a nota.");
+  // }
+  // };
+
+
+  
   return (
     <>
       <main className="container">
@@ -102,14 +124,14 @@ function Chat() {
           </div>
           <div className="center">
             <div className="newNote">
-              <button className="create" onClick={() => NovoNota(notas)}>
+              <button className="create" onClick={() => NovoNota()}>
                 + Create New Note
               </button>
 
               {notas.map((nota) => (
                 <button
                   className="tag-button"
-                  onClick={() => clickNotas(notas)}
+                  onClick={() => clickNotas(nota)}
                 >
                   <img src={japan} alt="imagem do japan." />
                   <div className="note-info">
@@ -122,7 +144,6 @@ function Chat() {
                   </div>
                 </button>
               ))}
- 
             </div>
 
             <div className="edit-nota">
@@ -131,8 +152,10 @@ function Chat() {
               <div className="tittle">
                 <input
                   type="text"
-                  class="note-tittle"
+                  className="note-tittle"
                   placeholder="Adicione um título"
+                  value={NotaSelecionado?.title}
+                  onChange={event => setNotaSelecionado({ ...NotaSelecionado, title: event.target.value })}
                 />
               </div>
 
@@ -142,7 +165,7 @@ function Chat() {
                   <span>Tags</span>
                   <input
                     type="text"
-                    class="tag-input"
+                    className="tag-input"
                     placeholder="Adicione uma tag"
                   />
                 </div>
@@ -163,7 +186,9 @@ function Chat() {
                 ></textarea>
               </div>
               <div className="buttonEdit">
-                <button className="saveNote">Save note</button>
+                <button className="saveNote">
+                  Save note
+                </button>
                 <button className="cancel">Cancel</button>
               </div>
             </div>
