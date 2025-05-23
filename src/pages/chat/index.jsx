@@ -258,7 +258,7 @@ const deleteNota = async () => {
             </div>
 
             <div className="end">
-              <button onClick={arquivarNota}>
+              <button>
                 <img src={archive} alt="Enviar" />
                 Archive Note
               </button>
