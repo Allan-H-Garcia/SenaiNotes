@@ -5,11 +5,11 @@ import japan from "../../assets/imgs/japan.png";
 import rectangle from "../../assets/imgs/Rectangle44.png";
 import LeftPanel from "../../components/left-painel";
 import archive from "../../assets/imgs/Archive.png";
-import enviar from "../../assets/imgs/enviar.png";
+// import enviar from "../../assets/imgs/enviar.png";
 import Delete from "../../assets/imgs/Delete.png";
 import clock from "../../assets/imgs/CircleClock.png";
 import tag from "../../assets/imgs/Tag.png";
-import login from "../../assets/imgs/login.png";
+// import login from "../../assets/imgs/login.png";
 
 
 function Chat() {
@@ -78,7 +78,6 @@ function Chat() {
     }
   };
 
-<<<<<<< HEAD
   const salvarNota = async () => {
     if (!NotaSelecionado) {
       alert("Nenhuma nota selecionada.");
@@ -136,61 +135,15 @@ const deleteNota = async () => {
     console.error("Erro ao deletar a nota.");
   }
 };
- 
-// const arquivarNota = async () => {
-=======
 
-  const salvarNota = async () => {
-    if (!NotaSelecionado) {
-      alert("Nenhuma nota selecionada.");
-      return;
-    }
 
-    const notaParaSalvar = {
-      ...NotaSelecionado,
-      image: "assets/sample.png",
-      date: new Date().toISOString(),
-    };
-
-    const method = NotaSelecionado.id ? "PUT" : "POST";
-    const url = NotaSelecionado.id
-      ? `http://localhost:3000/notes/${NotaSelecionado.id}`
-      : `http://localhost:3000/notes`;
-
-    const response = await fetch(url, {
-      method,
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: "Bearer " + localStorage.getItem("meuToken"),
-      },
-      body: JSON.stringify(notaParaSalvar),
-    });
-
-    if (response.ok) {
-      const notaAtualizada = await response.json();
-      setNotaSelecionado(notaAtualizada);
-      getNotas();
-      console.log("Nota salva com sucesso!");
-    } else {
-      console.error("Erro ao salvar a nota.");
-    }
-  };
-
-  const dataAtual = new Date().toLocaleDateString('en-GB', {
-  day: '2-digit',
-  month: 'short',
-  year: 'numeric',
-});
->>>>>>> 6d7ee8044a7fde0dd36c8e699368c2fb72e141f0
-
-//     const res = await fetch(`http://localhost:3000/notes/${NotaSelecionado.id}`, {
-//       method: "PATCH",
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//       body: JSON.stringify({ archived: false }),
-//     })
-//   }
+const AtualizacaoArquivo = ({ dataAtualizacao }) => {
+  const dataFormatada = new Date(dataAtualizacao).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long', 
+    day: 'numeric',
+  });
+    }  
 
 
   return (
@@ -267,18 +220,7 @@ const deleteNota = async () => {
                   <img className="clock" src={clock} alt="." />
                   <span>Last edited</span>
                   <span className="space-two">
-<<<<<<< HEAD
-                    29 Oct 2024 value={NotaSelecionado?.time}
-                    onChange=
-                    {(event) =>
-                      setNotaSelecionado({
-                        ...NotaSelecionado,
-                        time: event.target.value,
-                      })
-                    }
-=======
                     {dataAtual}
->>>>>>> 6d7ee8044a7fde0dd36c8e699368c2fb72e141f0
                   </span>
                 </div>
               </div>
@@ -321,6 +263,6 @@ const deleteNota = async () => {
       </main>
     </>
   );
-}
+  }
 
 export default Chat;
