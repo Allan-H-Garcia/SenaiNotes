@@ -57,7 +57,7 @@ function Chat() {
       title: novoTitulo,
       description: "",
       tags: [],
-      time: "",
+      date: new Date().toISOString(),
     };
 
     let response = await fetch("http://localhost:3000/notes", {
@@ -137,13 +137,13 @@ const deleteNota = async () => {
 };
 
 
-const AtualizacaoArquivo = ({ dataAtualizacao }) => {
-  const dataFormatada = new Date(dataAtualizacao).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long', 
-    day: 'numeric',
-  });
-    }  
+// const AtualizacaoArquivo = ({ dataAtualizacao }) => {
+//   const dataFormatada = new Date(dataAtualizacao).toLocaleDateString('en-US', {
+//     year: 'numeric',
+//     month: 'long', 
+//     day: 'numeric',
+//   });
+//     }  
 
 
   return (
@@ -220,7 +220,7 @@ const AtualizacaoArquivo = ({ dataAtualizacao }) => {
                   <img className="clock" src={clock} alt="." />
                   <span>Last edited</span>
                   <span className="space-two">
-                    {dataAtual}
+                    {new Date(NotaSelecionado?.date).toLocaleDateString()}
                   </span>
                 </div>
               </div>
