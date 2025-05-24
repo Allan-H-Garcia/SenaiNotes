@@ -1,45 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 * {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-
-
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
-
 .container {
-    display: flex;
-
+  display: flex;
 }
 
 img.tag {
-    margin: 10px;
+  margin: 10px;
 }
 
 .tags {
-    width: 272px !important;
-    height: 900px;
-    flex-direction: column;
-    border-right: 1px solid #E0E4EA;
-    font-family: "Inter";
-    text-decoration: none !important;
-    padding: 20px;
-
-
-
+  width: 272px !important;
+  height: 900px;
+  flex-direction: column;
+  border-right: 1px solid #e0e4ea;
+  font-family: "Inter";
+  text-decoration: none !important;
+  padding: 20px;
 }
 
 .globo-tags {
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    display: flex;
-
-
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  display: flex;
 }
-
 
 .newNote {
     width: 290px;
@@ -51,331 +41,299 @@ img.tag {
     border-right: 1px solid #E0E4EA ;
     font-family: "Inter";
     overflow: auto;
+     }
     
 
 
+@keyframes show-up {
+  0% {
+    opacity: 0;
+    transform: translateX(100);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .notes {
-    width: 242px;
-    height: 745px;
-    display: flex;
-    flex-direction: column;
-
-
+  width: 242px;
+  height: 745px;
+  display: flex;
+  flex-direction: column;
 }
 
 .notes button {
-    flex-direction: column;
-    width: 238px;
-    height: 106px;
-    background-color: white;
-    border: none;
-    border-bottom: 1px solid #E0E4EA;
-
-
+  flex-direction: column;
+  width: 238px;
+  height: 106px;
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid #e0e4ea;
 }
-
 
 .allNotes {
-    border-bottom: 1px solid #E0E4EA;
-    height: 81px;
-    width: 1241px;
-    display: flex;
-    align-items: center;
-    padding-left: 30px;
-
+  border-bottom: 1px solid #e0e4ea;
+  height: 81px;
+  width: 1241px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
 }
-
 
 .allNotes img {
-    height: 24px;
-    width: 24px;
-    margin-left: 1060px;
-
+  height: 24px;
+  width: 24px;
+  margin-left: 1060px;
 }
-
 
 .middle {
-    align-self: flex-start;
-    font-family: "Inter";
-
+  align-self: flex-start;
+  font-family: "Inter";
 }
-
 
 .edit-nota {
-    width: 588px;
-    flex-direction: column;
-    border-right: 1px solid #E0E4EA;
-    font-family: "Inter";
-    padding: 23px !important;
-    
-
+  width: 588px;
+  flex-direction: column;
+  border-right: 1px solid #e0e4ea;
+  font-family: "Inter";
+  padding: 23px !important;
 }
 
-
 .note-tittle {
-    font-size: 24px;
-    border: none;
-    font-weight: bold;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    border: none;
-    outline: none;
-
+  font-size: 24px;
+  border: none;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border: none;
+  outline: none;
 }
 
 .tag-input {
-    margin-left: 61px;
-    align-items: center;
-    margin-top: 12px;
-    border: none;
-    font-family: "Inter";
-    border: none;
-    outline: none;
+  margin-left: 61px;
+  align-items: center;
+  margin-top: 12px;
+  border: none;
+  font-family: "Inter";
+  border: none;
+  outline: none;
 }
 
 .time {
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
 }
 
 .organization {
-    font-size: 14px;
-    font-family: "Inter";
+  font-size: 14px;
+  font-family: "Inter";
 
-    border-bottom: 1px solid #E0E4EA;
-
+  border-bottom: 1px solid #e0e4ea;
 }
 
 .organization img {
-
-    width: 16px;
-    height: 16px;
-    margin: 6px;
-
+  width: 16px;
+  height: 16px;
+  margin: 6px;
 }
 
-
 .context {
-    font-size: 14px;
-    font-family: "Inter";
-
+  font-size: 14px;
+  font-family: "Inter";
 }
 
 .space {
-    margin-left: 62px;
+  margin-left: 62px;
 }
 
 .space-two {
-    margin-left: 21px;
+  margin-left: 21px;
 }
-
 
 .text-content {
-    font-family: "Inter";
-    font-size: 14px;
-    align-items: center;
-    display: flex;
-
-
+  font-family: "Inter";
+  font-size: 14px;
+  align-items: center;
+  display: flex;
 }
-
 
 .list {
-    padding-left: 23px;
-    font-family: "Inter";
+  padding-left: 23px;
+  font-family: "Inter";
 }
 
-
 .saveNote {
-    background-color: #335CFF;
-    color: white;
-    font-family: "Inter";
-    font-size: 14px;
-    border-radius: 8px;
-    width: 99px;
-    height: 41px;
-    border: none;
+  background-color: #335cff;
+  color: white;
+  font-family: "Inter";
+  font-size: 14px;
+  border-radius: 8px;
+  width: 99px;
+  height: 41px;
+  border: none;
 }
 
 .cancel {
-    background-color: #F3F5F8;
-    color: #525866;
-    font-family: "Inter";
-    font-size: 14px;
-    border-radius: 8px;
-    width: 99px;
-    height: 41px;
-    border: none;
-    margin-left: 20px;
-
+  background-color: #f3f5f8;
+  color: #525866;
+  font-family: "Inter";
+  font-size: 14px;
+  border-radius: 8px;
+  width: 99px;
+  height: 41px;
+  border: none;
+  margin-left: 20px;
 }
 
 .buttonEdit {
-    margin-top: 25px;
-    border-top: 1px solid #E0E4EA;
-    align-items: end;
-    display: flex;
-    padding: 16px 24px;
-display: flex;
-justify-content: start;
-
+  margin-top: 25px;
+  border-top: 1px solid #e0e4ea;
+  align-items: end;
+  display: flex;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: start;
 }
 
-
 .tags button {
-    align-items: center;
-    display: flex;
-    width: 240px;
-    height: 40px;
-    /* margin: 0px 16px 1px 16px; */
-    background-color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
+  align-items: center;
+  display: flex;
+  width: 240px;
+  height: 40px;
+  /* margin: 0px 16px 1px 16px; */
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
 
-    font-family: "Inter";
-
+  font-family: "Inter";
 }
 
 .tags p {
-    border-top: 1px solid #E0E4EA;
-    width: 240px;
-    font-family: "Inter";
-    color: #717784;
-    padding: 10px
+  border-top: 1px solid #e0e4ea;
+  width: 240px;
+  font-family: "Inter";
+  color: #717784;
+  padding: 10px;
 }
 
 .create {
-    color: white;
-    background-color: blue;
-    margin: 16px;
-    width: 240px;
-    height: 41px !important;
-    border-radius: 8px;
-    border: none;
-    font-family: "Inter";
+  color: white;
+  background-color: blue;
+  margin: 16px;
+  width: 240px;
+  height: 41px !important;
+  border-radius: 8px;
+  border: none;
+  font-family: "Inter";
 }
 
 .end button {
-    font-family: "Inter";
-    font-size: 14px;
-    display: flex;
-    width: 325px !important;
+  font-family: "Inter";
+  font-size: 14px;
+  display: flex;
+  width: 325px !important;
 
-    height: 44px;
-    margin: 10px;
-    border-radius: 8px;
-    background-color: white;
-    border: 1px solid #CACFD8;
-    align-items: center;
-    display: flex;
-    padding-left: 20px;
-
-
+  height: 44px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: white;
+  border: 1px solid #cacfd8;
+  align-items: center;
+  display: flex;
+  padding-left: 20px;
 }
 
 .end img {
-    width: 20px;
-    height: 20px;
-
+  width: 20px;
+  height: 20px;
 }
 
 .allNotes h1 {
-    font-size: 24px;
-    font-family: "Inter";
+  font-size: 24px;
+  font-family: "Inter";
 
-    margin-bottom: 0px !important;
-
+  margin-bottom: 0px !important;
 }
 
 .center {
-    display: flex;
+  display: flex;
 }
 
-
-
-
-
-
-
-
 .tag-button {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    width: 242px;
-    height: 91px;
-    padding: 8px;
-    border: none;
-    background-color: white;
-    border-bottom: 1px solid #e0e0e0;
-    text-align: left;
-    cursor: pointer;
-    box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 242px;
+  height: 91px;
+  padding: 8px;
+  border: none;
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+  cursor: pointer;
+  box-sizing: border-box;
 }
 
 .tag-button:hover {
-    background-color: #f9f9f9;
+  background-color: #f9f9f9;
 }
 
 .tag-button img {
-    width: 57px;
-    height: 75px;
-    border-radius: 8px;
-    object-fit: cover;
+  width: 57px;
+  height: 75px;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .note-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  overflow: hidden;
 }
 
 .note-info h3 {
-    font-size: 13px;
-    margin: 0;
-    font-weight: 600;
-    line-height: 1.2;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  font-size: 13px;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .info {
-    display: flex;
-    gap: 4px;
-    margin: 4px 0;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 4px;
+  margin: 4px 0;
+  flex-wrap: wrap;
 }
 
 .info span {
-    background-color: #e0e0e0;
-    border-radius: 6px;
-    padding: 2px 6px;
-    font-size: 10px;
+  background-color: #e0e0e0;
+  border-radius: 6px;
+  padding: 2px 6px;
+  font-size: 10px;
 }
 
 .date-info {
-    font-size: 11px;
-    color: #666;
-    margin: 0;
+  font-size: 11px;
+  color: #666;
+  margin: 0;
 }
 
 .corpo-notas {
-    height: 415px;
-    width: 524px;
-    font-size: 14px;
-    color: #666;
-    margin: 0;
-    font-family: "Inter";
-    margin-top: 20px;
-    border: none;
-    outline: none;
-    
+  height: 415px;
+  width: 524px;
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  font-family: "Inter";
+  margin-top: 20px;
+  border: none;
+  outline: none;
 }

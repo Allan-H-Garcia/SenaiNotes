@@ -187,7 +187,7 @@ const AtualizacaoArquivo = ({ dataAtualizacao }) => {
                 <input
                   type="text"
                   className="note-tittle"
-                  placeholder="Insert a title"
+                  placeholder="Adicione um título"
                   value={NotaSelecionado?.title}
                   onChange={(event) =>
                     setNotaSelecionado({
@@ -205,7 +205,7 @@ const AtualizacaoArquivo = ({ dataAtualizacao }) => {
                   <input
                     type="text"
                     className="tag-input"
-                    placeholder="Tag your post"
+                    placeholder="Adicione uma tag"
                     value={NotaSelecionado?.tags}
                     onChange={(event) =>
                       setNotaSelecionado({
@@ -230,7 +230,7 @@ const AtualizacaoArquivo = ({ dataAtualizacao }) => {
                   className="corpo-notas"
                   name="corpo-notas"
                   id=""
-                  placeholder="Add your notes here!"
+                  placeholder="Escreva suas anotações aqui!"
                   value={NotaSelecionado?.description}
                   onChange={(event) =>
                     setNotaSelecionado({
