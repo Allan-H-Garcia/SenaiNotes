@@ -1,7 +1,8 @@
 import tag from "../../assets/imgs/Tag.png";
 import home from "../../assets/imgs/Home.svg";
 import logo from "../../assets/imgs/logo.svg";
-// import Archive from "../../assets/Archive.svg";
+import archive from "../../assets/imgs/Archive.png";
+
 
 
 function LeftPanel() {
@@ -18,7 +19,7 @@ function LeftPanel() {
                     <img className="tag" src={home} alt="." />
                     All Notes</button>
                 <button>
-                    <img className="tag" src={home} alt="." />
+                    <img src={archive} alt="Enviar" />
                     Archived Notes</button> 
 
                 <p>Tags</p>

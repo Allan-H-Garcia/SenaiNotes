@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 import "./chat.css";
 import japan from "../../assets/imgs/japan.png";
-// import tag from "../../assets/imgs/Tag.png";
 import rectangle from "../../assets/imgs/Rectangle44.png";
 import LeftPanel from "../../components/left-painel";
 import archive from "../../assets/imgs/Archive.png";
-// import enviar from "../../assets/imgs/enviar.png";
 import Delete from "../../assets/imgs/Delete.png";
 import clock from "../../assets/imgs/CircleClock.png";
 import tag from "../../assets/imgs/Tag.png";
-// import login from "../../assets/imgs/login.png";
+import search from "../../assets/imgs/Search.png";
+import config from "../../assets/imgs/config.png";
+import enter from "../../assets/imgs/enter.png";
+
 
 
 function Chat() {
@@ -114,36 +115,28 @@ function Chat() {
     }
   };
 
-const deleteNota = async () => {
-  if (!NotaSelecionado) {
-    alert("Nenhuma nota selecionada.");
-    return;
-  }
+  const deleteNota = async () => {
+    if (!NotaSelecionado) {
+      alert("Nenhuma nota selecionada.");
+      return;
+    }
 
-  const response = await fetch(`http://localhost:3000/notes/${NotaSelecionado.id}`, {
-    method: "DELETE",
-    headers: {
-      Authorization: "Bearer " + localStorage.getItem("meuToken"),
-    },
-  });
+    const response = await fetch(`http://localhost:3000/notes/${NotaSelecionado.id}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: "Bearer " + localStorage.getItem("meuToken"),
+      },
+    });
 
-  if (response.ok) {
-    alert("Nota deletada com sucesso!");
-    setNotas(notas.filter(nota => nota.id !== NotaSelecionado.id));
-    setNotaSelecionado(null); // Limpa a nota selecionada
-  } else {
-    console.error("Erro ao deletar a nota.");
-  }
-};
+    if (response.ok) {
+      alert("Nota deletada com sucesso!");
+      setNotas(notas.filter(nota => nota.id !== NotaSelecionado.id));
+      setNotaSelecionado(null); // Limpa a nota selecionada
+    } else {
+      console.error("Erro ao deletar a nota.");
+    }
+  };
 
-
-// const AtualizacaoArquivo = ({ dataAtualizacao }) => {
-//   const dataFormatada = new Date(dataAtualizacao).toLocaleDateString('en-US', {
-//     year: 'numeric',
-//     month: 'long', 
-//     day: 'numeric',
-//   });
-//     }  
 
 
   return (
@@ -158,6 +151,17 @@ const deleteNota = async () => {
             <h1>
               <strong>All Notes</strong>
             </h1>
+
+            <div class="search-box">
+              <img src={search} alt="Ícone de lupa" class="search-icon" />
+              <input type="text" placeholder="Search by title, content, or tags..." />
+            </div>
+
+
+            <img className="allImg1" src={config} alt="Configuração." />
+            <img className="allImg2" src={enter} alt="Entrar." />
+
+
           </div>
           <div className="center">
             <div className="newNote">
@@ -174,7 +178,8 @@ const deleteNota = async () => {
                       <span>Travel</span>
                       <span>Personal</span>
                     </div>
-                    <p className="date-info">28 Oct 2024</p>
+                    <p className="date-info">
+                      {new Date(NotaSelecionado?.date).toLocaleDateString()}</p>
                   </div>
                 </button>
               ))}
@@ -187,7 +192,7 @@ const deleteNota = async () => {
                 <input
                   type="text"
                   className="note-tittle"
-                  placeholder="Adicione um título"
+                  placeholder="Insert a title"
                   value={NotaSelecionado?.title}
                   onChange={(event) =>
                     setNotaSelecionado({
@@ -205,7 +210,7 @@ const deleteNota = async () => {
                   <input
                     type="text"
                     className="tag-input"
-                    placeholder="Adicione uma tag"
+                    placeholder="Insert a tag"
                     value={NotaSelecionado?.tags}
                     onChange={(event) =>
                       setNotaSelecionado({
@@ -230,7 +235,7 @@ const deleteNota = async () => {
                   className="corpo-notas"
                   name="corpo-notas"
                   id=""
-                  placeholder="Escreva suas anotações aqui!"
+                  placeholder="Write your notes here!"
                   value={NotaSelecionado?.description}
                   onChange={(event) =>
                     setNotaSelecionado({
@@ -263,6 +268,6 @@ const deleteNota = async () => {
       </main>
     </>
   );
-  }
+}
 
 export default Chat;

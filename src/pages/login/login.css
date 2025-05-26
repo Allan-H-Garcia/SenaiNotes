@@ -127,7 +127,7 @@
 }
 
 .form-hint strong {
-    margin-left: 15px;
+    margin-left: 6px !important;
 }
 
 
@@ -143,11 +143,8 @@
 
     width: 540px !important;
     height: 556px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 
-
-}
-
-@keyframes  {
 
 }
 

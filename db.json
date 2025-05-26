@@ -31,24 +31,28 @@
   ],
   "notes": [
     {
-      "id": "9999",
-      "userId": "1",
-      "title": "React Development 2.0",
-      "description": "Texto 2.",
-      "image": "assets/sample.png",
-      "tags": [
-        "Dev",
-        "Teste"
-      ],
-      "date": "2025-05-19T22:52:52.331Z",
-      "archived": true
+      "id": "5948",
+      "title": "Japan",
+      "description": "🗓️ Roteiro: 3 dias em Tóquio\n📍 Dia 1 – Tradição & Cultura\nManhã:\n\nTemplo Senso-ji (Asakusa)\n\nLojas e comidinhas na Nakamise Street\n\nTarde:\n\nUeno Park (museus, zoológico ou só caminhar)\n\nAlmoço com ramen ou sushi em Ameyoko Market\n\nNoite:\n\nBairro Akihabara (anime, eletrônicos, fliperamas)\n\n📍 Dia 2 – Modernidade & Experiências\nManhã:\n\nBairro Harajuku (Takeshita Street – moda jovem e excêntrica)\n\nVisita ao santuário Meiji Jingu\n\nTarde:\n\nCaminhada por Omotesando (arquitetura moderna)\n\nCompras e cafés estilosos\n\nNoite:\n\nSubida na Tokyo Skytree ou Tokyo Tower\n\nJantar em Shinjuku + Golden Gai (bares pequenos e únicos)\n\n📍 Dia 3 – Passeios e relax\nManhã:\n\nMercado Tsukiji Outer Market (tapas japonesas, frutos do mar)\n\nBairro Ginza (lojas de luxo, arquitetura moderna)\n\nTarde:\n\nExperiência digital no TeamLab Planets (precisa reserva antecipada)\n\nNoite:\n\nÚltimo passeio em Shibuya (cruzamento famoso + lojas e karaokês)",
+      "tags": "Itinerary",
+      "date": "2025-05-26T16:06:55.781Z",
+      "image": "assets/sample.png"
     },
     {
-      "id": "e908",
-      "title": "Jaquelline",
-      "description": "",
-      "tags": [],
-      "date": "2025-05-24T00:43:23.245Z"
+      "id": "2c8c",
+      "title": "Food/Japan",
+      "description": "🗓️ Dia 1 – Tradição japonesa\n🍱 Café da manhã:\n\nOnigiri (bolinho de arroz recheado, vendido em konbinis como 7-Eleven, Lawson etc.)\n\nChá verde ou café gelado japonês\n\n🍣 Almoço:\n\nSushi em restaurante de esteira (kaitenzushi), como o Sushiro ou Genki Sushi\n\nExperimente atum, salmão, polvo e enguia\n\n🍢 Lanche:\n\nDango (bolinho de arroz no palito com molho doce)\n\nOu taiyaki (doce em formato de peixe, recheado com creme ou feijão azuki)\n\n🍜 Jantar:\n\nRamen (sopa de macarrão) — escolha um estilo: shoyu, miso, tonkotsu...\n\nSugestão: Ichiran ou Ippudo\n\n🗓️ Dia 2 – Street food & izakaya\n🍳 Café da manhã:\n\nTamagoyaki (omelete doce japonesa) + arroz ou missoshiro\n\nOu um bento de café da manhã em lojas de departamento\n\n🍤 Almoço:\n\nTempurá (legumes e camarão empanados) com arroz e missoshiro\n\nLugares tradicionais: Tendon Tenya (barato e bom)\n\n🍡 Lanche:\n\nCrepe japonês em Harajuku (com chantilly, frutas ou sorvete)\n\nOu mochi gelado\n\n🍶 Jantar:\n\nJantar em um izakaya (bar japonês com vários pratinhos):\n→ yakitori (espetinhos), edamame, karaage (frango frito), gyoza\n→ Beba umeshu (licor de ameixa) ou saquê\n\n🗓️ Dia 3 – Moderno & doce\n🥯 Café da manhã:\n\nSanduíche de ovo japonês (tamago sando) de konbini\n\nCafé de uma rede japonesa tipo Doutor ou Tully’s Coffee\n\n🍛 Almoço:\n\nCurry japonês com arroz e tonkatsu (lombo empanado)\n\nSugestão: Coco Ichibanya ou qualquer restaurante de curry local\n\n🍨 Lanche:\n\nSorvete de matcha\n\nOu um parfait japonês com gelatina, frutas e doce de feijão\n\n🥟 Jantar:\n\nOkonomiyaki (panqueca japonesa com repolho, carne ou frutos do mar)\n\nAlternativa: Takoyaki (bolinho de polvo), típico de Osaka mas fácil de achar em Tóquio",
+      "tags": "What to eat?",
+      "date": "2025-05-26T16:09:00.134Z",
+      "image": "assets/sample.png"
+    },
+    {
+      "id": "0934",
+      "title": "Checklist",
+      "description": "🧳 O que não posso esquecer de levar para o Japão no inverno\n\n1. Roupas e acessórios\nCasaco pesado e à prova de vento (down jacket é ideal)\n\nCamadas térmicas (segunda pele) para usar por baixo\n\nSuéteres e blusas quentinhas\n\nCachecol, luvas e gorro (preferencialmente térmicos)\n\nMeias grossas e confortáveis\n\nCalçados impermeáveis e confortáveis para caminhar\n\nRoupas para dentro do hotel (pijama quente)\n\n2. Produtos para cuidados pessoais\nHidratante para rosto e corpo (o inverno é seco)\n\nProtetor labial com FPS\n\nProtetor solar (mesmo no frio, o sol pode queimar)\n\nÓculos escuros (se for passear na neve)\n\n3. Equipamentos e eletrônicos\nAdaptador de tomada para o Japão (tipo A/B)\n\nCarregadores e power bank\n\nCelular com apps úteis (Google Maps, tradutor) já baixados\n\nCâmera (se quiser fotos incríveis da paisagem de inverno)\n\n4. Outros itens importantes\nDocumentos (passaporte, visto, seguro viagem)\n\nCartões e dinheiro em espécie (yen)\n\nMáscaras faciais (muito comum no Japão, ainda mais no inverno para evitar gripes)\n\nMedicamentos básicos (para gripe, dor de cabeça, etc.)",
+      "tags": "🧳🌍✈️",
+      "date": "2025-05-26T16:12:30.830Z",
+      "image": "assets/sample.png"
     }
   ]
 }
