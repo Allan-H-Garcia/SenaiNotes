@@ -17,6 +17,9 @@ function Chat() {
   const [notas, setNotas] = useState([]);
   const [NotaSelecionado, setNotaSelecionado] = useState(null);
 
+  const [image, setImage] = useState(null);
+  const [imageURL, setImageURL] = useState(null);
+
   useEffect(() => {
     //Executada toda vez que a tela abre.
     getNotas();
@@ -137,6 +140,61 @@ function Chat() {
     }
   };
 
+  const aoAdicionarImagem = (event) => {
+    const arquivo = event.target.files[0];
+    console.log("arquivo", arquivo);
+
+    setImage(arquivo);
+    setImageURL(URL.createObjectURL(arquivo));
+
+
+  }
+
+
+  // const onSaveNote = async () => {
+  //   const response = await fetch(`http://localhost:3000/notes/${notaSelecionada.id}`, {
+  //     method: "PUT",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify({
+  //       ...notaSelecionada,
+  //       title,
+  //       description,
+  //       tags: tags.split(",").map(t => t.trim()),
+  //       image: "assets/sample.png", // temporário
+  //       date: new Date().toISOString()
+  //     })
+  //   });
+
+  //   if (response.ok) {
+  //     alert("Sucesso!");
+  //   } else {
+  //     alert("Erro!");
+  //   }
+  // }
+
+
+
+  // const onSaveNoteImg = async () => {
+    
+  //   let formData = new FormData();
+
+  //   formData.append("titulo", title);
+  //   formData.append("description", description);
+  //   formData.append("tags", tags);
+  //   formData.append("image", image);
+
+  //   const response = await fetch(`http://localhost:3000/notes/${notaSelecionada.id}`, {
+  //     method: "PUT",
+  //     headers: {},
+  //     body: formData
+  //   });
+
+  //   if (response.ok) {
+  //     alert("Sucesso!");
+  //   } else {
+  //     alert("Erro!");
+  //   }
+  // }
 
 
   return (
@@ -179,14 +237,23 @@ function Chat() {
                       <span>Personal</span>
                     </div>
                     <p className="date-info">
-                      {new Date(NotaSelecionado?.date).toLocaleDateString()}</p>
+                      {new Date(nota?.date).toLocaleDateString()}</p>
                   </div>
                 </button>
               ))}
             </div>
 
             <div className="edit-nota">
-              <img className="photo" src={rectangle} alt="Rectangle" />
+              
+              <label className="photo"
+              style={{backgroundImage:  `url('${imageURL ||rectangle}')` }}
+              >
+            
+
+                <input onChange={event => aoAdicionarImagem(event)} type="file" className="file_input" />
+
+
+              </label>
 
               <div className="tittle">
                 <input
