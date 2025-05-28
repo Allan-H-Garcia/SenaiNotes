@@ -13,7 +13,7 @@ function NewUser() {
 
     const onNewUserClick = async () => {
 
-        let response = await fetch("https://senai-gpt-api.up.railway.app/users", {
+        let response = await fetch("http://apisenainotes.azurewebsites.net/api/NovoUsuario", {
 
             headers: {
                 "Content-Type": "application/json",

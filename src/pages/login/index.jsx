@@ -13,7 +13,7 @@ function Login() {
   const onLoginClick = async () => {
 
 
-    let response = await fetch("https://senai-gpt-api.azurewebsites.net/login", {
+    let response = await fetch("https://apisenainotes.azurewebsites.net/api/NovoUsuario/login", {
 
       headers: {
         "Content-Type": "application/json"
@@ -21,7 +21,7 @@ function Login() {
       method: "POST", //Método que envia dados
       body: JSON.stringify({ //quem define é o back-end
         email: email,
-        password: password //não precisa de virgula porque é a ultima propriedade
+        Senha: password //não precisa de virgula porque é a ultima propriedade
       })
 
     });

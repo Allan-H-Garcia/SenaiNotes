@@ -11,8 +11,6 @@ import search from "../../assets/imgs/Search.png";
 import config from "../../assets/imgs/config.png";
 import enter from "../../assets/imgs/enter.png";
 
-
-
 function Chat() {
   const [notas, setNotas] = useState([]);
   const [NotaSelecionado, setNotaSelecionado] = useState(null);
@@ -20,6 +18,8 @@ function Chat() {
   const [image, setImage] = useState(null);
   const [imageURL, setImageURL] = useState(null);
 
+
+  
   useEffect(() => {
     //Executada toda vez que a tela abre.
     getNotas();
@@ -27,12 +27,15 @@ function Chat() {
 
   const getNotas = async () => {
     // Arrow Funtion
-    let response = await fetch("http://localhost:3000/notes", {
-      headers: {
-        Authorization: "Bearer " + localStorage.getItem("meuToken"),
-        //Bearer: é o tipo de autenticaçãonpm
-      },
-    });
+    let response = await fetch(
+      "http://apisenainotes.azurewebsites.net/api/Nota",
+      {
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("meuToken"),
+          //Bearer: é o tipo de autenticaçãonpm
+        },
+      }
+    );
 
     console.log(response);
 
@@ -58,20 +61,23 @@ function Chat() {
     }
 
     let nNota = {
-      title: novoTitulo,
-      description: "",
+      Titulo: novoTitulo,
+      Conteudo: "",
       tags: [],
       date: new Date().toISOString(),
     };
 
-    let response = await fetch("http://localhost:3000/notes", {
-      method: "POST",
-      headers: {
-        Authorization: "Bearer " + localStorage.getItem("meuToken"),
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(nNota),
-    });
+    let response = await fetch(
+      "http://apisenainotes.azurewebsites.net/api/Nota",
+      {
+        method: "POST",
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("meuToken"),
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(nNota),
+      }
+    );
 
     if (response.ok) {
       const notaCriada = await response.json(); // essa deve ter o `id`
@@ -82,41 +88,36 @@ function Chat() {
     }
   };
 
-  const salvarNota = async () => {
-    if (!NotaSelecionado) {
-      alert("Nenhuma nota selecionada.");
-      return;
-    }
+ const salvarNota = async () => {
+   const metodo = NotaSelecionado?.id ? "PUT" : "POST";
+   const url = NotaSelecionado?.id 
+      ? `http://apisenainotes.azurewebsites.net/api/Nota/${NotaSelecionado.id}` 
+      : `http://apisenainotes.azurewebsites.net/api/Nota`;
 
-    const notaParaSalvar = {
-      ...NotaSelecionado,
-      image: "assets/sample.png",
-      date: new Date().toISOString(),
-    };
+   let formData = new FormData();
+   formData.append("titulo", NotaSelecionado?.title || "Nova Nota");
+   formData.append("description", NotaSelecionado?.description || "");
+   formData.append("tags", JSON.stringify(NotaSelecionado?.tags || []));
+   if (image) formData.append("image", image);
 
-    const method = NotaSelecionado.id ? "PUT" : "POST";
-    const url = NotaSelecionado.id
-      ? `http://localhost:3000/notes/${NotaSelecionado.id}`
-      : `http://localhost:3000/notes`;
-
-    const response = await fetch(url, {
-      method,
+   const response = await fetch(url, {
+      method: metodo,
       headers: {
-        "Content-Type": "application/json",
-        Authorization: "Bearer " + localStorage.getItem("meuToken"),
+         Authorization: "Bearer " + localStorage.getItem("meuToken"),
       },
-      body: JSON.stringify(notaParaSalvar),
-    });
+      body: formData,
+   });
 
-    if (response.ok) {
+   if (response.ok) {
+      alert("Sucesso ao salvar a nota!");
       const notaAtualizada = await response.json();
       setNotaSelecionado(notaAtualizada);
       getNotas();
-      alert("Nota salva com sucesso!");
-    } else {
+   } else {
       alert("Erro ao salvar a nota.");
-    }
-  };
+   }
+};
+
 
   const deleteNota = async () => {
     if (!NotaSelecionado) {
@@ -124,16 +125,19 @@ function Chat() {
       return;
     }
 
-    const response = await fetch(`http://localhost:3000/notes/${NotaSelecionado.id}`, {
-      method: "DELETE",
-      headers: {
-        Authorization: "Bearer " + localStorage.getItem("meuToken"),
-      },
-    });
+    const response = await fetch(
+      `http://apisenainotes.azurewebsites.net/api/Nota${NotaSelecionado.id}`,
+      {
+        method: "DELETE",
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("meuToken"),
+        },
+      }
+    );
 
     if (response.ok) {
       alert("Nota deletada com sucesso!");
-      setNotas(notas.filter(nota => nota.id !== NotaSelecionado.id));
+      setNotas(notas.filter((nota) => nota.id !== NotaSelecionado.id));
       setNotaSelecionado(null); // Limpa a nota selecionada
     } else {
       console.error("Erro ao deletar a nota.");
@@ -146,10 +150,7 @@ function Chat() {
 
     setImage(arquivo);
     setImageURL(URL.createObjectURL(arquivo));
-
-
-  }
-
+  };
 
   // const onSaveNote = async () => {
   //   const response = await fetch(`http://localhost:3000/notes/${notaSelecionada.id}`, {
@@ -172,30 +173,39 @@ function Chat() {
   //   }
   // }
 
+  const onSaveNoteImg = async () => {
+    if (!NotaSelecionado || !image) {
+      alert("Nenhuma nota selecionada ou imagem ausente.");
+      return;
+    }
 
+    let formData = new FormData();
+    formData.append("id", NotaSelecionado.id); // Inclui o ID da nota
+    formData.append("titulo", NotaSelecionado.title);
+    formData.append("description", NotaSelecionado.description);
+    formData.append("tags", JSON.stringify(NotaSelecionado.tags)); // Converter array para string JSON se necessário
+    formData.append("image", image); // Arquivo da imagem
 
-  // const onSaveNoteImg = async () => {
-    
-  //   let formData = new FormData();
+    const response = await fetch(
+      `http://apisenainotes.azurewebsites.net/api/Nota/${NotaSelecionado.id}`,
+      {
+        method: "PUT",
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("meuToken"),
+        }, // Sem 'Content-Type', pois `FormData` define automaticamente.
+        body: formData,
+      }
+    );
 
-  //   formData.append("titulo", title);
-  //   formData.append("description", description);
-  //   formData.append("tags", tags);
-  //   formData.append("image", image);
-
-  //   const response = await fetch(`http://localhost:3000/notes/${notaSelecionada.id}`, {
-  //     method: "PUT",
-  //     headers: {},
-  //     body: formData
-  //   });
-
-  //   if (response.ok) {
-  //     alert("Sucesso!");
-  //   } else {
-  //     alert("Erro!");
-  //   }
-  // }
-
+    if (response.ok) {
+      alert("Sucesso!");
+      const notaAtualizada = await response.json();
+      setNotaSelecionado(notaAtualizada); // Atualiza os dados da nota selecionada
+      getNotas(); // Atualiza a lista de notas na tela
+    } else {
+      alert("Erro ao salvar a nota.");
+    }
+  };
 
   return (
     <>
@@ -212,14 +222,14 @@ function Chat() {
 
             <div class="search-box">
               <img src={search} alt="Ícone de lupa" class="search-icon" />
-              <input type="text" placeholder="Search by title, content, or tags..." />
+              <input
+                type="text"
+                placeholder="Search by title, content, or tags..."
+              />
             </div>
-
 
             <img className="allImg1" src={config} alt="Configuração." />
             <img className="allImg2" src={enter} alt="Entrar." />
-
-
           </div>
           <div className="center">
             <div className="newNote">
@@ -237,22 +247,23 @@ function Chat() {
                       <span>Personal</span>
                     </div>
                     <p className="date-info">
-                      {new Date(nota?.date).toLocaleDateString()}</p>
+                      {new Date(nota?.date).toLocaleDateString()}
+                    </p>
                   </div>
                 </button>
               ))}
             </div>
 
             <div className="edit-nota">
-              
-              <label className="photo"
-              style={{backgroundImage:  `url('${imageURL ||rectangle}')` }}
+              <label
+                className="photo"
+                style={{ backgroundImage: `url('${imageURL || rectangle}')` }}
               >
-            
-
-                <input onChange={event => aoAdicionarImagem(event)} type="file" className="file_input" />
-
-
+                <input
+                  onChange={(event) => aoAdicionarImagem(event)}
+                  type="file"
+                  className="file_input"
+                />
               </label>
 
               <div className="tittle">

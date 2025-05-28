@@ -13,7 +13,7 @@ function ConfirPassword() {
     const onResetClick = async () => {
 
 
-        let response = await fetch("https://senai-gpt-api.azurewebsites.net/login", {
+        let response = await fetch("http://apisenainotes.azurewebsites.net", {
 
             headers: {
                 "Content-Type": "application/json"
